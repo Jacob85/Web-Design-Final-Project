@@ -1,0 +1,21 @@
+*   /*All tags (*) should not have margin and padding
+      0 is the only number we could write without px or dppx*/
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    width: 1100px;
+    margin: 0 auto;
+    height: 960px;
+}
+#wrapper
+{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto; /*0 reefer to vertical margin; auto reefer to horizontal margin*/
+    background-color: #326c99;
+    height: 100% /*change befor submit to see first layouts works*/
+}
+#map-canvas { height: 100% }
