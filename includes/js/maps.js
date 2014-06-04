@@ -20,12 +20,12 @@ function initialize()
     putMarkers();
 
     /* Adding style to the map */
-    map.setOptions({styles: styles});
+    map.setOptions({styles: ns_data.styles});
 
 }
 
 function putMarkers(){
-    origins.forEach(function (origin){
+    ns_data.origins.forEach(function (origin){
         console.log("print origin: ", origin);
         var latLng = new google.maps.LatLng(origin.locationX, origin.locationY);
         var img = origin.icon;
@@ -58,40 +58,5 @@ function putMarkers(){
     });
 }
 
-
-var styles  = [
-    {
-        "elementType": "geometry.fill",
-        "stylers": [
-            { "saturation": -89 },
-            { "weight": 0.4 },
-            { "visibility": "on" },
-            { "invert_lightness": true },
-            { "hue": "#ff0000" }
-        ]
-    },
-    {
-        "elementType": "labels.text.fill",
-        "stylers": [
-            { "saturation": -89 },
-            { "hue": "#ff0000" },
-            { "weight": 0.1 },
-            { "color": "#333333" },
-            { "visibility": "simplified" }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.icon",
-        "stylers": [
-            { "visibility": "off" }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "stylers": [
-            { "weight": 0.3 }
-        ]
-    }];
 
 
