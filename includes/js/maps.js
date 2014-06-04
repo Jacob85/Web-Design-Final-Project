@@ -38,8 +38,26 @@ function putMarkers(){
             animation: google.maps.Animation.DROP, /*Animation drop */
             title: title   /*tooltip message */
         });
+
+        var data = '<div id="content">'+
+            '<h1 class="infoWindowHeader">The Header</h1>'+
+            '<div class="infoWindowBody">'+
+            '<p>this is some text...<br>' +
+            'some more text....<br>' +
+            'and that is it!</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: data
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+        });
     });
 }
+
 
 var styles  = [
     {

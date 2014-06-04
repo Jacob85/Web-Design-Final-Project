@@ -19,3 +19,13 @@ body
     height: 100% /*change befor submit to see first layouts works*/
 }
 #map-canvas { height: 100% }
+
+.infoWindowBody
+{
+    background-color: #e0e0e0;
+}
+
+.infoWindowHeader
+{
+    background-color: #c12e2a;
+}
