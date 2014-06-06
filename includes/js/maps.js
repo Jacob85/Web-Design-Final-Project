@@ -22,9 +22,24 @@ function initialize()
     /* Adding style to the map */
     map.setOptions({styles: ns_data.styles});
 
+
 }
 
 function putMarkers(){
+
+   $.getJSON( "includes/data.json", function(data) {
+        console.log( "success" + data);
+    })
+        .done(function() {
+            console.log( "second success" );
+        })
+        .fail(function(e) {
+            console.log( "error" + e );
+        })
+        .always(function() {
+            console.log( "complete" );
+        });
+    console.log("Out of the Json")
     ns_data.origins.forEach(function (origin){
         console.log("print origin: ", origin);
         var latLng = new google.maps.LatLng(origin.locationX, origin.locationY);
@@ -53,7 +68,7 @@ function putMarkers(){
         });
 
         google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map,marker);
+            infowindow.open(map, marker);
         });
     });
 }
