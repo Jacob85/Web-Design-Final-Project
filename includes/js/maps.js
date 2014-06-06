@@ -2,7 +2,7 @@
 /**
  * Created by Jacob on 6/3/14.
  */
-var map ;
+var googleMap ;
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -14,13 +14,13 @@ function initialize()
     };
 
     /*Create new Google Map element*/
-    map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+    googleMap = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
 
-    /* Adding a markers to the map */
+    /* Adding a markers to the googleMap */
     putMarkers();
 
-    /* Adding style to the map */
-    map.setOptions({styles: ns_data.styles});
+    /* Adding style to the googleMap */
+    googleMap.setOptions({styles: ns_data.styles});
 
 
 }
@@ -48,7 +48,7 @@ function putMarkers(){
 
         var marker = new google.maps.Marker({
             position: latLng,
-            map: map,
+            map: googleMap,
             icon: img,
             animation: google.maps.Animation.DROP, /*Animation drop */
             title: title   /*tooltip message */
@@ -68,7 +68,7 @@ function putMarkers(){
         });
 
         google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map, marker);
+            infowindow.open(googleMap, marker);
         });
     });
 }

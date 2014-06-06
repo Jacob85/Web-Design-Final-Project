@@ -20,7 +20,7 @@ ns_data.origins = [
         "title": 'second marker'
     }];
 
-/* styles is a json object for the google map style definitions*/
+/* styles is a json object for the google googleMap style definitions*/
 ns_data.styles  = [
     {
         "elementType": "geometry.fill",
