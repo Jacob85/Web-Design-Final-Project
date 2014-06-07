@@ -42,7 +42,7 @@ $( document ).ready(function(){
 
     $('#zoom_out_button').click(function(){
         console.log("zoom_out_button Clicked");
-        googleMap.setZoom(5);
+        googleMap.setZoom(2);
     });
 
 });
