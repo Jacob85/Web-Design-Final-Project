@@ -2,7 +2,9 @@
 /**
  * Created by Jacob on 6/3/14.
  */
+//global varibles
 var googleMap ;
+var markers = [];
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -55,6 +57,8 @@ function putMarkers(){
             animation: google.maps.Animation.DROP, /*Animation drop */
             title: title   /*tooltip message */
         });
+        //push the markers to the global array (so we can remove them from map while zoom changes)
+        markers.push(marker);
 
         var data = '<div id="content">'+
             '<h1 class="infoWindowHeader">The Header</h1>'+
