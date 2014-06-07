@@ -22,6 +22,8 @@ function initialize()
     /* Adding style to the googleMap */
     googleMap.setOptions({styles: ns_data.styles});
 
+    /*Add Events*/
+    addListenerToMap(googleMap);
 
 }
 
