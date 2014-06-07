@@ -8,7 +8,7 @@ body
 {
     width: 1100px;
     margin: 0 auto;
-    height: 960px;
+    height: 650px;
 }
 #wrapper
 {
@@ -28,4 +28,15 @@ body
 .infoWindowHeader
 {
     background-color: #c12e2a;
+}
+#zoom_out_button
+{
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 530px;
+    left: 1100px;
+    border: solid black;
+
 }

@@ -37,3 +37,12 @@ function setAllMap(map)
         markers[i].setMap(map);
     }
 }
+
+$( document ).ready(function(){
+
+    $('#zoom_out_button').click(function(){
+        console.log("zoom_out_button Clicked");
+        googleMap.setZoom(5);
+    });
+
+});

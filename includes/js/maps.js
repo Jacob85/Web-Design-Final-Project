@@ -12,7 +12,8 @@ function initialize()
 {
     var mapOptions = {
         center: new google.maps.LatLng(32.06, 34.77),/*Tel Aviv*/
-        zoom: 13
+        zoom: 13,
+        disableDefaultUI: true      /*Remove the streetView and the satellite button*/
     };
 
     /*Create new Google Map element*/
