@@ -1,24 +1,39 @@
-*   /*All tags (*) should not have margin and padding
-      0 is the only number we could write without px or dppx*/
+*
 {
     margin: 0;
     padding: 0;
 }
+
+.clear
+{
+    clear: both;
+}
+
+header, section, nav, aside, footer
+{
+    display:block;
+}
+
 body
 {
     width: 1100px;
     margin: 0 auto;
     height: 650px;
 }
+
 #wrapper
 {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto; /*0 reefer to vertical margin; auto reefer to horizontal margin*/
     background-color: #326c99;
-    height: 100% /*change befor submit to see first layouts works*/
+    height: 100%; /*change before submit to see first layouts works*/
 }
-#map-canvas { height: 100% }
+
+#main-map
+{
+    height: 100%;
+}
 
 .infoWindowBody
 {
@@ -29,14 +44,52 @@ body
 {
     background-color: #c12e2a;
 }
-#zoom_out_button
-{
-    background-color: white;
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    top: 530px;
-    left: 1100px;
-    border: solid black;
 
+#zoomOutButton
+{
+    background-image: url("images/zoomOutButton.png");
+    height: 38px;
+    width: 40px;
+    position: absolute;
+    top: 560px;
+    left: 1070px;
+    border: solid black;
+}
+
+.infoWindow{
+    width: 252px;
+    height: 85px;
+}
+
+.infoLeftButton{
+    background-image: url("images/infoLeftButton.png");
+    width: 33px;
+    height: 79px;
+    margin-left: 3px;
+    margin-top: 3px;
+    float: left;
+}
+
+.infoLeftButton:hover, .infoRightButton:hover{
+    width: 36px;
+    height: 85px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.infoBody{
+    background-image: url("images/infoBody.png");
+    width: 180px;
+    height: 79px;
+    margin-top: 3px;
+    float: left;
+    text-align: center;
+}
+
+.infoRightButton{
+    background-image: url("images/infoRightButton.png");
+    width: 33px;
+    height: 79px;
+    margin-top: 3px;
+    float: left;
 }

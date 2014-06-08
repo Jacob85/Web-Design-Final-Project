@@ -10,15 +10,17 @@ function addListenerToMap(googleMap)
         var zoomLevel = googleMap.getZoom();
         console.log("Zoom Level = " + zoomLevel);
 
-        if (zoomLevel <= 7)
+        if (zoomLevel <= 8)
         {
             //make sure the markers are not display
             removeMarkers();
+            $('#zoomOutButton').hide();
         }
         else
         {
             //display the markers
             displayMarkers(googleMap);
+            $('#zoomOutButton').show();
         }
     });
 }
@@ -40,9 +42,8 @@ function setAllMap(map)
 
 $( document ).ready(function(){
 
-    $('#zoom_out_button').click(function(){
-        console.log("zoom_out_button Clicked");
+    $('#zoomOutButton').click(function(){
+        console.log("zoomOutButton Clicked");
         googleMap.setZoom(2);
     });
-
 });

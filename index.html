@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Virtual Trip</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+    <meta charset="utf-8" name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
     <script src="includes/js/jquery-1.11.1.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRBeSZkyZjv7AbhXAaGujrDYdPNPmFBEY&sensor=true"></script>
     <script src="includes/js/data.js"></script>
@@ -13,9 +14,9 @@
 </head>
 <body>
 <div id="wrapper">
-    <div id="map-canvas"></div>
+    <div id="main-map"></div>
     <!-- Button for zooming out, for now just white background until i will have the image to replace it with -->
-    <a href="#" id="zoom_out_button">Click to zoom out</a>
+    <a href="#" id="zoomOutButton" title="Zoom Out"></a>
 
 </div>
 </body>
