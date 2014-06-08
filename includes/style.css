@@ -47,7 +47,7 @@ body
 
 #zoomOutButton
 {
-    background-image: url("images/zoomOutButton.png");
+    background-image: url("../images/zoomOutButton.png");
     height: 38px;
     width: 40px;
     position: absolute;
@@ -62,7 +62,7 @@ body
 }
 
 .infoLeftButton{
-    background-image: url("images/infoLeftButton.png");
+    background-image: url("../images/infoLeftButton.png");
     width: 33px;
     height: 79px;
     margin-left: 3px;
@@ -78,7 +78,7 @@ body
 }
 
 .infoBody{
-    background-image: url("images/infoBody.png");
+    background-image: url("../images/infoBody.png");
     width: 180px;
     height: 79px;
     margin-top: 3px;
@@ -87,7 +87,7 @@ body
 }
 
 .infoRightButton{
-    background-image: url("images/infoRightButton.png");
+    background-image: url("../images/infoRightButton.png");
     width: 33px;
     height: 79px;
     margin-top: 3px;

@@ -10,7 +10,7 @@ ns_data.origins = [
     {
         "locationX": "32.04",
         "locationY": "34.77",
-        "icon": 'includes/images/iconFacebook.png',
+        "icon": 'images/iconFacebook.png',
         "title": 'first marker',
         "date": 'JAN 25 2014 - 9:45 PM',
         "address": 'Dizingoff, Tel-aviv',
@@ -20,7 +20,7 @@ ns_data.origins = [
     {
         "locationX": "32.06",
         "locationY": "34.77",
-        "icon": 'includes/images/iconFacebook.png',
+        "icon": 'images/iconFacebook.png',
         "title": 'second marker',
         "date": 'FEB 27 2014 - 11:30 PM',
         "address": 'Namir, Tel-aviv',
@@ -30,7 +30,7 @@ ns_data.origins = [
     {
         "locationX": "32.08",
         "locationY": "34.77",
-        "icon": 'includes/images/iconFacebook.png',
+        "icon": 'images/iconFacebook.png',
         "title": 'third marker',
         "date": 'JAN 1 2014 - 15:20 PM',
         "address": 'Even gvirol, Tel-aviv',
