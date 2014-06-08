@@ -2,31 +2,31 @@
     {
         "locationX": "32.04",
         "locationY": "34.77",
-        "icon": "includes/images/thumb_Facebook_icon.png",
+        "icon": "includes/images/iconFacebook.png",
         "title": "first marker",
         "date": "JAN 25 2014 - 9:45 PM",
         "address": "Dizingoff, Tel-aviv",
-        "siteLink": "#",
+        "siteLink": "http://www.facebook.com",
         "infoWindowId": "infoWindow1"
     },
     {
         "locationX": "32.06",
         "locationY": "34.77",
-        "icon": "includes/images/thumb_Facebook_icon.png",
+        "icon": "includes/images/iconGoogle.png",
         "title": "second marker",
         "date": "FEB 27 2014 - 11:30 PM",
         "address": "Namir, Tel-aviv",
-        "siteLink": "#",
+        "siteLink": "http://www.google.com",
         "infoWindowId": "infoWindow2"
     },
     {
         "locationX": "32.08",
         "locationY": "34.77",
-        "icon": "includes/images/thumb_Facebook_icon.png",
+        "icon": "includes/images/iconYoutube.png",
         "title": "third marker",
         "date": "JAN 1 2014 - 15:20 PM",
         "address": "Even gvirol, Tel-aviv",
-        "siteLink": "#",
+        "siteLink": "http://www.youtube.com",
         "infoWindowId": "infoWindow3"
     }
     ]

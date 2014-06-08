@@ -64,7 +64,7 @@ function putMarkers(originsData){
         // Create the info window as string data.
         var data = '<div class="infoWindow" id="'+ origin.infoWindowId +'">'+
             '<div class="infoLeftButton" onclick="leftButtonPressed(' + index + ');"></div>'+
-            '<div class="infoBody"><p>'+ origin.date + '</p><p>'+ origin.address + '</p><br><a href="'+ origin.siteLink + '">GO TO SITE</a> </div>'+
+            '<div class="infoBody"><p>'+ origin.date + '</p><p>'+ origin.address + '</p><br><a target="_blank" href="'+ origin.siteLink + '">GO TO SITE</a> </div>'+
             '<div class="infoRightButton" onclick="rightButtonPressed(' + index + ');"></div>'+
             '<div class="clear"></div>'+
             '</div>';
