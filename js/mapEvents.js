@@ -47,3 +47,11 @@ $( document ).ready(function(){
         googleMap.setZoom(2);
     });
 });
+
+/*
+* Moving the map camera to the center of every time the window is resided
+* */
+$( window ).resize(function() {
+    console.log("Moving the map to + " + mapCenter);
+    googleMap.panTo(mapCenter);
+});

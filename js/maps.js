@@ -7,13 +7,14 @@
 var googleMap ;
 var markers = [];
 var currentOpenMarker = null;
+var mapCenter = new google.maps.LatLng(32.06, 34.77);/*Tel Aviv*/
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
 function initialize()
 {
     var mapOptions = {
-        center: new google.maps.LatLng(32.06, 34.77),/*Tel Aviv*/
+        center: mapCenter,
         zoom: 13,
         disableDefaultUI: true      /*Remove the streetView and the satellite button*/
     };
