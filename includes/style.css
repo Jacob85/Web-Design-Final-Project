@@ -34,16 +34,6 @@ html, body
     height: 100%;
 }
 
-.infoWindowBody
-{
-    background-color: #e0e0e0;
-}
-
-.infoWindowHeader
-{
-    background-color: #c12e2a;
-}
-
 #zoomOutButton
 {
     background-image: url("../images/zoomOutButton.png");

@@ -23,7 +23,13 @@ function addListenerToMap(googleMap)
             $('#zoomOutButton').show();
         }
     });
+
+    google.maps.event.addListener(googleMap, 'dragend', function(){
+        console.log("center changed: ");
+        mapCenter = googleMap.getCenter();
+    });
 }
+
 function displayMarkers(googleMap)
 {
     setAllMap(googleMap);
@@ -32,6 +38,7 @@ function removeMarkers()
 {
    setAllMap(null);
 }
+
 // Sets the map on all markers in the array.
 function setAllMap(map)
 {
@@ -40,6 +47,9 @@ function setAllMap(map)
     }
 }
 
+/**
+ * Add onclick event to the zoom out button.
+ */
 $( document ).ready(function(){
 
     $('#zoomOutButton').click(function(){
@@ -48,10 +58,10 @@ $( document ).ready(function(){
     });
 });
 
-/*
+/**
 * Moving the map camera to the center of every time the window is resided
-* */
+*/
 $( window ).resize(function() {
-    console.log("Moving the map to + " + mapCenter);
+    console.log("Moving the map to: ", mapCenter);
     googleMap.panTo(mapCenter);
 });
