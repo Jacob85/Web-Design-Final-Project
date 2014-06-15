@@ -15,12 +15,16 @@ function addListenerToMap(googleMap)
             //make sure the markers are not display
             removeMarkers();
             $('#zoomOutButton').hide();
+            $('#miniMapFrame').hide(200);
         }
         else
         {
             //display the markers
             displayMarkers(googleMap);
             $('#zoomOutButton').show();
+            if (currentOpenMarker != null && isInfoWindowOpen(currentOpenMarker.infoWindow)){
+                $('#miniMapFrame').show(200);
+            }
         }
     });
 
@@ -54,6 +58,10 @@ $( document ).ready(function(){
 
     $('#zoomOutButton').click(function(){
         console.log("zoomOutButton Clicked");
+        $('#miniMapFrame').hide(200);
+        if (currentOpenMarker != null){
+            currentOpenMarker.infoWindow.close();
+        }
         googleMap.setZoom(2);
     });
 });

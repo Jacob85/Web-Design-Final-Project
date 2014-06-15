@@ -4,10 +4,13 @@
  */
 
 /*-----    global variables    ------*/
-var googleMap ;
+var googleMap;
+var miniMap;
 var markers = [];
 var currentOpenMarker = null;
 var mapCenter = new google.maps.LatLng(32.06, 34.77);/*Tel Aviv*/
+var miniMapCenter;
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -20,7 +23,7 @@ function initialize()
     };
 
     /*Create new Google Map element*/
-    googleMap = new google.maps.Map(document.getElementById("main-map"),mapOptions);
+    googleMap = new google.maps.Map(document.getElementById("mainMap"),mapOptions);
 
     // Parse the json to get all origins.
     $.getJSON( "includes/data.json", function(originsData){
@@ -36,6 +39,22 @@ function initialize()
 
     /*Add Events*/
     addListenerToMap(googleMap);
+
+    // Remove the mini map frame until we show any marker.
+    $('#miniMapFrame').hide();
+}
+
+function initMiniMap(lat, lng){
+    miniMapCenter = new google.maps.LatLng(lat, lng);
+
+    var miniMapOptions = {
+        center: miniMapCenter,
+        zoom: 5,
+        disableDefaultUI: true
+    }
+
+    miniMap = new google.maps.Map(document.getElementById("miniMap"), miniMapOptions);
+    miniMap.setOptions({styles: ns_data.styles});
 }
 
 // Put all the markers and info windows on the map.
@@ -53,13 +72,17 @@ function putMarkers(originsData){
         var latLng = new google.maps.LatLng(origin.locationX, origin.locationY);
         var img = origin.icon;
         var title = origin.title;
+        var destX = origin.destinationX;
+        var destY = origin.destinationY;
 
         var marker = new google.maps.Marker({
             position: latLng,
             map: googleMap,
             icon: img,
             animation: google.maps.Animation.DROP, /*Animation drop */
-            title: title   /*tooltip message */
+            title: title,   /*tooltip message */
+            destinationX: destX,
+            destinationY: destY
         });
 
         // Create the info window as string data.
@@ -83,14 +106,21 @@ function putMarkers(originsData){
             if(isInfoWindowOpen(infoWindow)){
                 infoWindow.close();
                 currentOpenMarker = null;
+                $('#miniMapFrame').hide(200);
             }
             else{
+                $('#miniMapFrame').show(200);
+                initMiniMap(marker.destinationX, marker.destinationY);
                 if (currentOpenMarker != null){
                     currentOpenMarker.infoWindow.close();
                 }
                 infoWindow.open(googleMap, marker);
                 currentOpenMarker = marker;
             }
+        });
+
+        google.maps.event.addListener(infoWindow,'closeclick',function(){
+            $('#miniMapFrame').hide(200);
         });
 
         index++;
@@ -103,6 +133,9 @@ function leftButtonPressed(index){
 
     markers[index].infoWindow.close();
     markers[pos].infoWindow.open(googleMap, markers[pos]);
+
+    initMiniMap(markers[pos].destinationX, markers[pos].destinationY);
+    currentOpenMarker = markers[pos];
 }
 
 // Move to next info window.
@@ -111,6 +144,9 @@ function rightButtonPressed(index){
 
     markers[index].infoWindow.close();
     markers[pos].infoWindow.open(googleMap, markers[pos]);
+
+    initMiniMap(markers[pos].destinationX, markers[pos].destinationY);
+    currentOpenMarker = markers[pos];
 }
 
 // Check if info window is open or closed.
