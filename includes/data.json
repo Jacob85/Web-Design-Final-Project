@@ -9,7 +9,8 @@
         "date": "JAN 25 2014 - 9:45 PM",
         "address": "Dizingoff, Tel-aviv",
         "siteLink": "http://www.facebook.com",
-        "infoWindowId": "infoWindow1"
+        "infoWindowId": "infoWindow1",
+        "lineColor":"#CC9900"
     },
     {
         "locationX": "32.06",
@@ -21,7 +22,8 @@
         "date": "FEB 27 2014 - 11:30 PM",
         "address": "Namir, Tel-aviv",
         "siteLink": "http://www.google.com",
-        "infoWindowId": "infoWindow2"
+        "infoWindowId": "infoWindow2",
+        "lineColor":"#0099CC"
     },
     {
         "locationX": "32.08",
@@ -33,7 +35,8 @@
         "date": "JAN 1 2014 - 15:20 PM",
         "address": "Even gvirol, Tel-aviv",
         "siteLink": "http://www.youtube.com",
-        "infoWindowId": "infoWindow3"
+        "infoWindowId": "infoWindow3",
+        "lineColor":"#00CC66"
     }
     ]
 }

@@ -7,6 +7,7 @@
 var googleMap;
 var miniMap;
 var markers = [];
+var lines = [];
 var currentOpenMarker = null;
 var mapCenter = new google.maps.LatLng(32.06, 34.77);/*Tel Aviv*/
 var miniMapCenter;
@@ -84,7 +85,14 @@ function putMarkers(originsData){
             destinationX: destX,
             destinationY: destY
         });
-
+        var line = new google.maps.Polyline({
+            path: [new google.maps.LatLng(origin.locationX, origin.locationY), new google.maps.LatLng(destX, destY)],
+            strokeColor: origin.lineColor,
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            geodesic: true,
+            map: null
+        });
         // Create the info window as string data.
         var data = '<div class="infoWindow" id="'+ origin.infoWindowId +'">'+
             '<div class="infoLeftButton" onclick="leftButtonPressed(' + index + ');"></div>'+
@@ -100,6 +108,7 @@ function putMarkers(originsData){
         marker.infoWindow = infoWindow;
         //push the markers to the global array (so we can remove them from map while zoom changes)
         markers.push(marker);
+        lines.push(line);
 
         // Deal with marker click event.
         google.maps.event.addListener(marker, 'click', function() {

@@ -3,6 +3,8 @@
  */
 
 
+var zoomOutCenter = new google.maps.LatLng(50.370519205127344, -37.12453125000003);
+
 function addListenerToMap(googleMap)
 {
     google.maps.event.addListener(googleMap, 'zoom_changed', function()
@@ -10,6 +12,14 @@ function addListenerToMap(googleMap)
         var zoomLevel = googleMap.getZoom();
         console.log("Zoom Level = " + zoomLevel);
 
+        if (zoomLevel > 3)
+        {
+            removeLines();
+        }
+        else
+        {
+            drawLines(googleMap);
+        }
         if (zoomLevel <= 8)
         {
             //make sure the markers are not display
@@ -25,26 +35,27 @@ function addListenerToMap(googleMap)
             if (currentOpenMarker != null && isInfoWindowOpen(currentOpenMarker.infoWindow)){
                 $('#miniMapFrame').show(200);
             }
+            removeLines();
         }
     });
 
     google.maps.event.addListener(googleMap, 'dragend', function(){
-        console.log("center changed: ");
+        console.log("center changed: " + googleMap.getCenter());
         mapCenter = googleMap.getCenter();
     });
 }
 
 function displayMarkers(googleMap)
 {
-    setAllMap(googleMap);
+    setAllMarkerMap(googleMap);
 }
 function removeMarkers()
 {
-   setAllMap(null);
+   setAllMarkerMap(null);
 }
 
 // Sets the map on all markers in the array.
-function setAllMap(map)
+function setAllMarkerMap(map)
 {
     for (var i = 0; i < markers.length; i++) {
         markers[i].setMap(map);
@@ -62,7 +73,10 @@ $( document ).ready(function(){
         if (currentOpenMarker != null){
             currentOpenMarker.infoWindow.close();
         }
-        googleMap.setZoom(2);
+        googleMap.setZoom(3);
+        googleMap.panTo(zoomOutCenter);
+
+        //drawLines(googleMap);
     });
 });
 
@@ -73,3 +87,21 @@ $( window ).resize(function() {
     console.log("Moving the map to: ", mapCenter);
     googleMap.panTo(mapCenter);
 });
+
+function drawLines(googleMap)
+{
+    console.log("draw lines called");
+    /* Add you'r curved lines here */
+    setLinesToMap(googleMap);
+}
+function removeLines ()
+{
+    setLinesToMap(null);
+}
+function setLinesToMap(googleMap)
+{
+    for (var i=0; i<lines.length; i++)
+    {
+        lines[i].setMap(googleMap)
+    }
+}
