@@ -128,25 +128,27 @@ function putMarkers(originsData){
 }
 
 // Move to previous info window.
-function leftButtonPressed(index){
-    var pos = index - 1 < 0 ? markers.length - 1 : index - 1;
+function leftButtonPressed(currentIndex){
+    var nextIndex = currentIndex - 1 < 0 ? markers.length - 1 : currentIndex - 1;
 
-    markers[index].infoWindow.close();
-    markers[pos].infoWindow.open(googleMap, markers[pos]);
-
-    initMiniMap(markers[pos].destinationX, markers[pos].destinationY);
-    currentOpenMarker = markers[pos];
+    moveToNextInfoWindow(currentIndex, nextIndex);
 }
 
 // Move to next info window.
-function rightButtonPressed(index){
-    var pos = index + 1 > markers.length - 1 ? 0 : index + 1;
+function rightButtonPressed(currentIndex){
+    var nextIndex = currentIndex + 1 > markers.length - 1 ? 0 : currentIndex + 1;
 
-    markers[index].infoWindow.close();
-    markers[pos].infoWindow.open(googleMap, markers[pos]);
+    moveToNextInfoWindow(currentIndex, nextIndex);
+}
 
-    initMiniMap(markers[pos].destinationX, markers[pos].destinationY);
-    currentOpenMarker = markers[pos];
+// Close the current info window and open the next one.
+function moveToNextInfoWindow(currentIndex, nextIndex)
+{
+    markers[currentIndex].infoWindow.close();
+    markers[nextIndex].infoWindow.open(googleMap, markers[nextIndex]);
+
+    initMiniMap(markers[nextIndex].destinationX, markers[nextIndex].destinationY);
+    currentOpenMarker = markers[nextIndex];
 }
 
 // Check if info window is open or closed.
