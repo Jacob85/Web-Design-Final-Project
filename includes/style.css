@@ -133,6 +133,10 @@ html, body
     width: 368px;
 }
 
+#filters .slider:focus{
+    outline: none;
+}
+
 #filters .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: url("../images/sliderButton.png") no-repeat;
