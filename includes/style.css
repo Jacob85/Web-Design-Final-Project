@@ -123,25 +123,91 @@ html, body
     background: -webkit-linear-gradient(top ,rgba(0,0,0,0),rgba(0,0,0,1) ,rgba(0,0,0,0));
 }
 
-#filters .slider{
+#filtersButtons
+{
     position: absolute;
     bottom: 50px;
-    right: 20%;
-    -webkit-appearance: none;
-    background: url("../images/sliderBackground.png") no-repeat;
-    height: 21px;
-    width: 368px;
+    right: 50%;
+    background-image: url("../images/filtersBackground.png");
+    height: 71px;
+    width: 169px;
 }
 
-#filters .slider:focus{
-    outline: none;
+#filterDayNight
+{
+    position: absolute;
+    top: 16px;
+    width: 82px;
+    height: 57px;
+    background-image: url("../images/filterDayNight.png");
+    background-size:100% 100%;
 }
 
-#filters .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background: url("../images/sliderButton.png") no-repeat;
-    width: 14px;
-    height: 13px;
-    position: relative;
-    bottom: -2px;
+#filterDayNight:hover
+{
+    top: 14px;
+    left: -2px;
+    width: 86px;
+    height: 61px;
+    cursor: pointer;
+}
+
+#filterDate
+{
+    position: absolute;
+    left: 82px;
+    top: 16px;
+    width: 82px;
+    height: 57px;
+    background-image: url("../images/filterDate.png");
+    background-size:100% 100%;
+}
+
+#filterDate:hover
+{
+    top: 14px;
+    left: 80px;
+    width: 86px;
+    height: 61px;
+}
+
+/*#filters .slider{*/
+    /*position: absolute;*/
+    /*bottom: 60px;*/
+    /*right: 15%;*/
+    /*-webkit-appearance: none;*/
+    /*background: url("../images/sliderBackground.png") no-repeat;*/
+    /*height: 21px;*/
+    /*width: 368px;*/
+/*}*/
+
+/*#filters .slider:focus{*/
+    /*outline: none;*/
+/*}*/
+
+/*#filters .slider::-webkit-slider-thumb {*/
+    /*-webkit-appearance: none;*/
+    /*background: url("../images/sliderButton.png") no-repeat;*/
+    /*width: 14px;*/
+    /*height: 13px;*/
+    /*position: relative;*/
+    /*bottom: -2px;*/
+/*}                                                           */
+
+/**/
+
+#container{
+    float: left;
+    border: 1px solid #000;
+}
+
+#box{
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+#vertical-slider{
+    float: right;
+    height: 200px;
 }

@@ -62,10 +62,30 @@ function setAllMarkerMap(map)
     }
 }
 
+$(function() {
+    $( "#vertical-slider" ).slider({
+        orientation: "vertical",
+        range: "min",
+        min: 0,
+        max: 100,
+        value: 60,
+        slide: function( event, ui ) {
+            $( "#amount" ).val( ui.value );
+        }
+    });
+    $( "#amount" ).val( $( "#slider-vertical" ).slider( "value" ) );
+});
+
 /**
- * Add onclick event to the zoom out button.
+ * Add onclick event to the buttons.
  */
 $( document ).ready(function(){
+
+    var path = window.location.pathname;
+    var dateFilterOn = false;
+    var dayNightFilterOn = false;
+
+
 
     $('#zoomOutButton').click(function(){
         console.log("zoomOutButton Clicked");
@@ -75,10 +95,43 @@ $( document ).ready(function(){
         }
         googleMap.setZoom(3);
         googleMap.panTo(zoomOutCenter);
+    });
 
-        //drawLines(googleMap);
+    $('#filterDayNight').click(function(){
+        console.log("day night filter Clicked");
+
+        if (dayNightFilterOn){
+            $('#filterDayNight').css("background-image", "url("+path+"/images/filterDayNight.png)");
+            dayNightFilterOn = false;
+        }
+        else{
+            $('#filterDayNight').css("background-image", "url("+path+"/images/filterDayNightOn.png)");
+            dayNightFilterOn = true;
+            if (dateFilterOn){
+                $('#filterDate').css("background-image", "url("+path+"/images/filterDate.png)");
+                dateFilterOn = false;
+            }
+        }
+    });
+
+    $('#filterDate').click(function(){
+        console.log("date filter Clicked");
+
+        if (dateFilterOn){
+            $('#filterDate').css("background-image", "url("+path+"/images/filterDate.png)");
+            dateFilterOn = false;
+        }
+        else{
+            $('#filterDate').css("background-image", "url("+path+"/images/filterDateOn.png)");
+            dateFilterOn = true;
+            if (dayNightFilterOn){
+                $('#filterDayNight').css("background-image", "url("+path+"/images/filterDayNight.png)");
+                dayNightFilterOn = false;
+            }
+        }
     });
 });
+
 
 /**
 * Moving the map camera to the center of every time the window is resided
