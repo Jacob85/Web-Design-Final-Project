@@ -12,33 +12,28 @@ function addListenerToMap(googleMap)
         var zoomLevel = googleMap.getZoom();
         console.log("Zoom Level = " + zoomLevel);
 
-        if (zoomLevel > 3)
-        {
-            removeLines();
-        }
-        else
+        if (zoomLevel < 7) // Remove the markers and zoom button. Draw the lines.
         {
             drawLines(googleMap);
-        }
-        if (zoomLevel <= 8)
-        {
-            //make sure the markers are not display
             removeMarkers();
             $('#zoomOutButton').hide();
             $('#miniMapFrame').hide(200);
         }
-        else
+        else // Draw the markers and zoom button. Remove the lines.
         {
+            removeLines();
             //display the markers
             displayMarkers(googleMap);
             $('#zoomOutButton').show();
+
+            // If any marker's info window is open - show the mini map.
             if (currentOpenMarker != null && isInfoWindowOpen(currentOpenMarker.infoWindow)){
                 $('#miniMapFrame').show(200);
             }
-            removeLines();
         }
     });
 
+    // If map was dragged - save new center.
     google.maps.event.addListener(googleMap, 'dragend', function(){
         console.log("center changed: " + googleMap.getCenter());
         mapCenter = googleMap.getCenter();
@@ -68,7 +63,7 @@ function setAllMarkerMap(map)
 $( document ).ready(function(){
 
     var path = window.location.pathname;
-    var dateFilterOn = false;
+    var deviceFilterOn = false;
     var dayNightFilterOn = false;
 
 
@@ -93,28 +88,34 @@ $( document ).ready(function(){
         else{
             $('#filterDayNight').css("background-image", "url("+path+"/images/filterDayNightOn.png)");
             dayNightFilterOn = true;
-            if (dateFilterOn){
-                $('#filterDate').css("background-image", "url("+path+"/images/filterDate.png)");
-                dateFilterOn = false;
+            if (deviceFilterOn){
+                $('#filterDevice').css("background-image", "url("+path+"/images/filterDevice.png)");
+                deviceFilterOn = false;
             }
         }
+
+        removeLines();
+        drawLines(googleMap, null, dayNightFilterOn);
     });
 
-    $('#filterDate').click(function(){
-        console.log("date filter Clicked");
+    $('#filterDevice').click(function(){
+        console.log("device filter Clicked");
 
-        if (dateFilterOn){
-            $('#filterDate').css("background-image", "url("+path+"/images/filterDate.png)");
-            dateFilterOn = false;
+        if (deviceFilterOn){
+            $('#filterDevice').css("background-image", "url("+path+"/images/filterDevice.png)");
+            deviceFilterOn = false;
         }
         else{
-            $('#filterDate').css("background-image", "url("+path+"/images/filterDateOn.png)");
-            dateFilterOn = true;
+            $('#filterDevice').css("background-image", "url("+path+"/images/filterDeviceOn.png)");
+            deviceFilterOn = true;
             if (dayNightFilterOn){
                 $('#filterDayNight').css("background-image", "url("+path+"/images/filterDayNight.png)");
                 dayNightFilterOn = false;
             }
         }
+
+        removeLines();
+        drawLines(googleMap, deviceFilterOn);
     });
 });
 
@@ -123,24 +124,38 @@ $( document ).ready(function(){
 * Moving the map camera to the center of every time the window is resided
 */
 $( window ).resize(function() {
-    console.log("Moving the map to: ", mapCenter);
+//    console.log("Moving the map to: ", mapCenter);
     googleMap.panTo(mapCenter);
 });
 
-function drawLines(googleMap)
+
+function removeLines()
 {
-    console.log("draw lines called");
-    /* Add you'r curved lines here */
-    setLinesToMap(googleMap);
+    drawLines(null);
 }
-function removeLines ()
+function drawLines(googleMap, device, ampm)
 {
-    setLinesToMap(null);
-}
-function setLinesToMap(googleMap)
-{
-    for (var i=0; i<lines.length; i++)
-    {
-        lines[i].setMap(googleMap)
+    if(googleMap == null){
+        lines.forEach(function(line){
+            line.setMap(null);
+        });
+    }
+    else if(device){
+        lines.forEach(function(line){
+            line.strokeColor = line.lineColor.device;
+            line.setMap(googleMap);
+        });
+    }
+    else if(ampm){
+        lines.forEach(function(line){
+            line.strokeColor = line.lineColor.ampm;
+            line.setMap(googleMap);
+        });
+    }
+    else{
+        lines.forEach(function(line){
+            line.strokeColor = line.lineColor.none;
+            line.setMap(googleMap);
+        });
     }
 }

@@ -26,13 +26,13 @@ function initialize()
     /*Create new Google Map element*/
     googleMap = new google.maps.Map(document.getElementById("mainMap"),mapOptions);
 
-    // Parse the json to get all origins.
-    $.getJSON( "includes/data.json", function(originsData){
-        console.log( "success ", originsData);
+    // Parse the json to get all history.
+    $.getJSON( "includes/data.json", function(historyData){
+        console.log( "success ", historyData);
     })
-        .done(function(originsData) {
+        .done(function(historyData) {
             /* Adding markers to the googleMap */
-            putMarkers(originsData);
+            putMarkers(historyData);
         });
 
     /* Adding style to the googleMap */
@@ -59,44 +59,55 @@ function initMiniMap(lat, lng){
 }
 
 // Put all the markers and info windows on the map.
-function putMarkers(originsData){
+function putMarkers(historyData){
     var index = 0; // Current marker index.
 
     // Transform the json object to array.
-    var originsArray = [];
-    originsData.origins.forEach(function(ob){
-        originsArray.push(ob);
+    var historyArray = [];
+    historyData.history.forEach(function(ob){
+        historyArray.push(ob);
     });
 
-    // Go over the origins array and add them to the map.
-    originsArray.forEach(function (origin){
-        var latLng = new google.maps.LatLng(origin.locationX, origin.locationY);
-        var img = origin.icon;
-        var title = origin.title;
-        var destX = origin.destinationX;
-        var destY = origin.destinationY;
+    // Go over the history array and add them to the map.
+    historyArray.forEach(function (history){
+        console.log("history: ", history);
+        var latLng = new google.maps.LatLng(history.locationX, history.locationY);
+        var icon = history.favicon;
+        var title = history.title;
+        var destX = history.destinationX;
+        var destY = history.destinationY;
 
         var marker = new google.maps.Marker({
             position: latLng,
             map: googleMap,
-            icon: img,
+            icon: icon,
             animation: google.maps.Animation.DROP, /*Animation drop */
             title: title,   /*tooltip message */
             destinationX: destX,
             destinationY: destY
         });
         var line = new google.maps.Polyline({
-            path: [new google.maps.LatLng(origin.locationX, origin.locationY), new google.maps.LatLng(destX, destY)],
-            strokeColor: origin.lineColor,
-            strokeOpacity: 1.0,
-            strokeWeight: 1,
+            path: [new google.maps.LatLng(history.locationX, history.locationY), new google.maps.LatLng(destX, destY)],
+            strokeColor: null,
+            strokeOpacity: 0.4,
+            strokeWeight: 2,
             geodesic: true,
-            map: null
+            map: null,
+            lineColor: history.lineColor
         });
+
+        var infoBodyIconClass;
+        switch (history.device){
+            case"desktop": infoBodyIconClass = "infoBodyDesktopIcon"; break;
+            case "tablet": infoBodyIconClass = "infoBodyTabletIcon"; break;
+            case "mobile": infoBodyIconClass = "infoBodyMobileIcon"; break;
+            default : infoBodyIconClass = "infoBodyMobileIcon";
+        }
+
         // Create the info window as string data.
-        var data = '<div class="infoWindow" id="'+ origin.infoWindowId +'">'+
+        var data = '<div class="infoWindow" id="'+ history.infoWindowId +'">'+
             '<div class="infoLeftButton" onclick="leftButtonPressed(' + index + ');"></div>'+
-            '<div class="infoBody"><p>'+ origin.date + '</p><p>'+ origin.address + '</p><br><a target="_blank" href="'+ origin.siteLink + '">GO TO SITE</a> </div>'+
+            '<div class="infoBody"><div class="'+infoBodyIconClass+'" ></div><p>'+ history.date + '</p><p>'+ history.address + '</p><br><a target="_blank" href="'+ history.siteLink + '">GO TO SITE</a></div>'+
             '<div class="infoRightButton" onclick="rightButtonPressed(' + index + ');"></div>'+
             '<div class="clear"></div>'+
             '</div>';

@@ -105,6 +105,26 @@ html, body
     text-align: center;
 }
 
+.infoBodyDesktopIcon, .infoBodyTabletIcon, .infoBodyMobileIcon{
+    position: absolute;
+    right: 33px;
+    bottom: 0;
+    width: 52px;
+    height: 45px;
+}
+
+.infoBodyDesktopIcon{
+    background-image: url("../images/desktopIcon.png");
+}
+
+.infoBodyTabletIcon{
+    background-image: url("../images/tabletIcon.png");
+}
+
+.infoBodyMobileIcon{
+    background-image: url("../images/mobileIcon.png");
+}
+
 .infoRightButton{
     background-image: url("../images/infoRightButton.png");
     width: 33px;
@@ -113,17 +133,17 @@ html, body
     float: left;
 }
 
-#filters
-{
-    position: absolute;
-    bottom: 2%;
-    width: 100%;
-    height: 120px;
-    background: -webkit-linear-gradient(top ,rgba(0,0,0,0),rgba(0,0,0,1) ,rgba(0,0,0,0));
-}
+/*#filters*/
+/*{*/
+    /*position: absolute;*/
+    /*bottom: 2%;*/
+    /*width: 100%;*/
+    /*height: 120px;*/
+    /*background: -webkit-linear-gradient(top ,rgba(0,0,0,0),rgba(0,0,0,1) ,rgba(0,0,0,0));*/
+/*}*/
 
 #filtersButtons
-{
+{color: #ffffcc;
     position: absolute;
     bottom: 50px;
     right: 50%;
@@ -151,18 +171,18 @@ html, body
     cursor: pointer;
 }
 
-#filterDate
+#filterDevice
 {
     position: absolute;
     left: 82px;
     top: 16px;
     width: 82px;
     height: 57px;
-    background-image: url("../images/filterDate.png");
+    background-image: url("../images/filterDevice.png");
     background-size:100% 100%;
 }
 
-#filterDate:hover
+#filterDevice:hover
 {
     top: 14px;
     left: 80px;

@@ -1,42 +1,60 @@
-{"origins":[
+{"history":[
     {
         "locationX": "32.04",
         "locationY": "34.77",
         "destinationX": "37.10",
         "destinationY": "-119.60",
-        "icon": "images/iconFacebook.png",
+        "favicon": "http://www.facebook.com/favicon.ico",
         "title": "first marker",
-        "date": "JAN 25 2014 - 9:45 PM",
+        "date": "JAN 25 2014 - 9:45 AM",
         "address": "Dizingoff, Tel-aviv",
         "siteLink": "http://www.facebook.com",
         "infoWindowId": "infoWindow1",
-        "lineColor":"#CC9900"
+        "lineColor":
+            {
+                "device": "#f107f1",
+                "ampm": "#ffe402",
+                "none": "6060f0"
+            },
+        "device": "desktop"
     },
     {
         "locationX": "32.06",
         "locationY": "34.79",
         "destinationX": "34.50",
         "destinationY": "-118.3",
-        "icon": "images/iconGoogle.png",
+        "favicon": "images/iconGoogle.png",
         "title": "second marker",
         "date": "FEB 27 2014 - 11:30 PM",
         "address": "Namir, Tel-aviv",
         "siteLink": "http://www.google.com",
         "infoWindowId": "infoWindow2",
-        "lineColor":"#0099CC"
+        "lineColor":
+            {
+                "device": "#18c9ef",
+                "ampm": "#5e20d1",
+                "none": "6060f0"
+            },
+        "device": "tablet"
     },
     {
         "locationX": "32.08",
         "locationY": "34.77",
         "destinationX": "41.11",
         "destinationY": "-74.12",
-        "icon": "images/iconYoutube.png",
+        "favicon": "http://www.youtube.com/favicon.ico",
         "title": "third marker",
         "date": "JAN 1 2014 - 15:20 PM",
         "address": "Even gvirol, Tel-aviv",
         "siteLink": "http://www.youtube.com",
         "infoWindowId": "infoWindow3",
-        "lineColor":"#00CC66"
+        "lineColor":
+            {
+                "device": "#16eb61",
+                "ampm": "#5e20d1",
+                "none": "6060f0"
+            },
+        "device": "mobile"
     }
     ]
 }
