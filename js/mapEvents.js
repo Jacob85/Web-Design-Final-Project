@@ -62,20 +62,6 @@ function setAllMarkerMap(map)
     }
 }
 
-$(function() {
-    $( "#vertical-slider" ).slider({
-        orientation: "vertical",
-        range: "min",
-        min: 0,
-        max: 100,
-        value: 60,
-        slide: function( event, ui ) {
-            $( "#amount" ).val( ui.value );
-        }
-    });
-    $( "#amount" ).val( $( "#slider-vertical" ).slider( "value" ) );
-});
-
 /**
  * Add onclick event to the buttons.
  */

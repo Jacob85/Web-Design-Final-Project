@@ -69,11 +69,10 @@ html, body
 {
     background-image: url("../images/zoomOutButton.png");
     height: 38px;
-    width: 40px;
+    width: 38px;
     position: absolute;
     bottom: 5%;
     right: 5%;
-    border: solid black;
 }
 
 .infoWindow{
@@ -171,43 +170,28 @@ html, body
     height: 61px;
 }
 
-/*#filters .slider{*/
-    /*position: absolute;*/
-    /*bottom: 60px;*/
-    /*right: 15%;*/
-    /*-webkit-appearance: none;*/
-    /*background: url("../images/sliderBackground.png") no-repeat;*/
-    /*height: 21px;*/
-    /*width: 368px;*/
-/*}*/
-
-/*#filters .slider:focus{*/
-    /*outline: none;*/
-/*}*/
-
-/*#filters .slider::-webkit-slider-thumb {*/
-    /*-webkit-appearance: none;*/
-    /*background: url("../images/sliderButton.png") no-repeat;*/
-    /*width: 14px;*/
-    /*height: 13px;*/
-    /*position: relative;*/
-    /*bottom: -2px;*/
-/*}                                                           */
-
-/**/
-
-#container{
-    float: left;
-    border: 1px solid #000;
+#filters .slider{
+    position: absolute;
+    bottom: 60px;
+    right: 15%;
+    -webkit-appearance: none;
+    background: url("../images/sliderBackground.png") no-repeat;
+    height: 21px;
+    width: 368px;
 }
 
-#box{
-    float: left;
-    width: 200px;
-    height: 200px;
+#filters .slider:focus{
+    outline: none;
 }
 
-#vertical-slider{
-    float: right;
-    height: 200px;
+#filters .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: url("../images/sliderButton.png") no-repeat;
+    width: 14px;
+    height: 13px;
+    position: relative;
+    bottom: -2px;
 }
+
+
+
