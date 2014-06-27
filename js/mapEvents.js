@@ -4,6 +4,8 @@
 
 
 var zoomOutCenter = new google.maps.LatLng(50.370519205127344, -37.12453125000003);
+var deviceFilterOn = false;
+var dayNightFilterOn = false;
 
 function addListenerToMap(googleMap)
 {
@@ -63,10 +65,6 @@ function setAllMarkerMap(map)
 $( document ).ready(function(){
 
     var path = window.location.pathname;
-    var deviceFilterOn = false;
-    var dayNightFilterOn = false;
-
-
 
     $('#zoomOutButton').click(function(){
         console.log("zoomOutButton Clicked");
@@ -95,7 +93,7 @@ $( document ).ready(function(){
         }
 
         removeLines();
-        drawLines(googleMap, null, dayNightFilterOn);
+        drawLines(googleMap);
     });
 
     $('#filterDevice').click(function(){
@@ -115,7 +113,7 @@ $( document ).ready(function(){
         }
 
         removeLines();
-        drawLines(googleMap, deviceFilterOn);
+        drawLines(googleMap);
     });
 });
 
@@ -133,20 +131,20 @@ function removeLines()
 {
     drawLines(null);
 }
-function drawLines(googleMap, device, ampm)
+function drawLines(googleMap)
 {
     if(googleMap == null){
         lines.forEach(function(line){
             line.setMap(null);
         });
     }
-    else if(device){
+    else if(deviceFilterOn){
         lines.forEach(function(line){
             line.strokeColor = line.lineColor.device;
             line.setMap(googleMap);
         });
     }
-    else if(ampm){
+    else if(dayNightFilterOn){
         lines.forEach(function(line){
             line.strokeColor = line.lineColor.ampm;
             line.setMap(googleMap);
