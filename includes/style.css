@@ -94,15 +94,17 @@ html, body
     height: 85px;
     margin-left: 0px;
     margin-top: 0px;
+    background-size: 100%;
 }
 
 .infoBody{
-    background-image: url("../images/infoBody.png");
-    width: 180px;
+    width: 178px;
     height: 79px;
     margin-top: 3px;
     float: left;
     text-align: center;
+    border-left: solid 1px #000000;
+    border-right: solid 1px #000000;
 }
 
 .infoBodyDesktopIcon, .infoBodyTabletIcon, .infoBodyMobileIcon{

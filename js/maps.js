@@ -20,6 +20,7 @@ function initialize()
     var mapOptions = {
         center: mapCenter,
         zoom: 13,
+        minZoom: 3,
         disableDefaultUI: true      /*Remove the streetView and the satellite button*/
     };
 

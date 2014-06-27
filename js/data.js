@@ -14,8 +14,14 @@ ns_data.styles  = [
             { "gamma": 1.18 },
             { "weight": 0.2 }
         ]
-    },{
-}
+    },
+    {
+        "elementType": "labels.text.fill",
+        "stylers": [
+            { "weight": 0.1 },
+            { "color": "#a5a4a4" }
+        ]
+    }
 ];
 
 
