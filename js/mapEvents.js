@@ -80,14 +80,14 @@ $( document ).ready(function(){
         console.log("day night filter Clicked");
 
         if (dayNightFilterOn){
-            $('#filterDayNight').css("background-image", "url("+path+"/images/filterDayNight.png)");
+            $('#filterDayNight').css("background-image", "url("+path+"/../images/filterDayNight.png)");
             dayNightFilterOn = false;
         }
         else{
-            $('#filterDayNight').css("background-image", "url("+path+"/images/filterDayNightOn.png)");
+            $('#filterDayNight').css("background-image", "url("+path+"/../images/filterDayNightOn.png)");
             dayNightFilterOn = true;
             if (deviceFilterOn){
-                $('#filterDevice').css("background-image", "url("+path+"/images/filterDevice.png)");
+                $('#filterDevice').css("background-image", "url("+path+"/../images/filterDevice.png)");
                 deviceFilterOn = false;
             }
         }
@@ -100,14 +100,14 @@ $( document ).ready(function(){
         console.log("device filter Clicked");
 
         if (deviceFilterOn){
-            $('#filterDevice').css("background-image", "url("+path+"/images/filterDevice.png)");
+            $('#filterDevice').css("background-image", "url("+path+"/../images/filterDevice.png)");
             deviceFilterOn = false;
         }
         else{
-            $('#filterDevice').css("background-image", "url("+path+"/images/filterDeviceOn.png)");
+            $('#filterDevice').css("background-image", "url("+path+"/../images/filterDeviceOn.png)");
             deviceFilterOn = true;
             if (dayNightFilterOn){
-                $('#filterDayNight').css("background-image", "url("+path+"/images/filterDayNight.png)");
+                $('#filterDayNight').css("background-image", "url("+path+"/../images/filterDayNight.png)");
                 dayNightFilterOn = false;
             }
         }

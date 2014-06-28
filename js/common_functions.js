@@ -11,13 +11,14 @@ $(document).ready(function(){
 
 function populateViews(response)
 {
-    $("header").html(response.title);
     var index = 0;
 
     for (var i =0 ; i < response.articles.length ; i++)
     {
-        $('<article class="first_page_article">'+response.articles[i].content +'</article>').appendTo('#articlesSection');
+        $('<article class="first_page_article">'+response.articles[i].content +'</article><br>').appendTo('#about');
     }
+
+    $('.signInLabel').html(response.label);
     $('#signIn').html(response.loginEmail);
 
 }
