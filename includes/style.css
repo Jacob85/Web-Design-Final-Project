@@ -21,7 +21,6 @@ html, body
 
 #wrapper
 {
-    max-width: 1400px;
     width: 100%;
     height: 100%;
     margin: 0 auto; /*0 reefer to vertical margin; auto reefer to horizontal margin*/
@@ -256,7 +255,7 @@ html, body
 
 #signDiffAccount
 {
-    background-image: url("../images/signDiffAccount.png");
+    background: url("../images/signDiffAccount.png") no-repeat;
     float: left;
     width: 197px;
     height: 35px;
