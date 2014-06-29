@@ -220,6 +220,30 @@ html, body
     width: 100%;
 }
 
+.slider-date
+{
+    color: #aaaaaa;
+    font-size: 11px;
+    position: absolute;
+    top: -10px;
+}
+
+#apr{
+    left: -4px;
+}
+
+#may{
+    left: 114px;
+}
+
+#jun{
+    left: 232px;
+}
+
+#jul{
+    left: 351px;
+}
+
 #slider-range
 {
     background: url("../images/sliderBackground.png");
@@ -257,6 +281,10 @@ html, body
     top: 38px;
     left: 100px;
     z-index: 1;
+    font-size: 12px;
+    font-weight: 600;
+    text-indent: 20px;
+    padding-top: 2px;
 }
 
 #about

@@ -124,17 +124,13 @@ $( document ).ready(function(){
     $(function() {
         $( "#slider-range" ).slider({
             range: true,
-            min: 0,
-            max: 120,
-            values: [ 0, 115 ],
+            min: 1,
+            max: 91,
+            values: [ 1, 91 ],
             slide: function( event, ui ) {
-                $('#amount')[0].innerHTML = ui.values[0] + " - " + ui.values[1];
+                calculateDateFromAmount(ui);
             }
-    });
-
-    $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) +
-    " - " + $( "#slider-range" ).slider( "values", 1 ) );
-    });
+    })});
 
 });
 
@@ -152,6 +148,7 @@ function removeLines()
 {
     drawLines(null);
 }
+
 function drawLines(googleMap)
 {
     if(googleMap == null){
@@ -178,3 +175,46 @@ function drawLines(googleMap)
         });
     }
 }
+
+function calculateDateFromAmount(ui){
+
+    var left;
+    var right;
+
+    left = getDateFromVal(parseInt(ui.values[0]));
+    right = getDateFromVal(parseInt(ui.values[1]));
+
+    $('#amount')[0].innerHTML = left + " - " + right;
+}
+
+function getDateFromVal(val){
+    var res;
+
+    if(val <= 16){
+        res = val + 14 + "/04/2014";
+        if(val + 14 < 10){
+            res = "0"+res;
+        }
+    }
+    else if(val > 16 && val <= 47){
+        res = val - 16  + "/05/2014";
+        if(val - 16 < 10){
+            res = "0"+res;
+        }
+    }
+    else if(val > 47 && val <= 77){
+        res = val - 47 + "/06/2014";
+        if(val - 47 < 10){
+            res = "0"+res;
+        }
+    }
+    else{
+        res = val - 77 + "/07/2014";
+        if(val - 77 < 10){
+            res = "0"+res;
+        }
+    }
+
+    return res;
+}
+
