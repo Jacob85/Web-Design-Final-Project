@@ -116,11 +116,6 @@ $( document ).ready(function(){
         drawLines(googleMap);
     });
 
-//    $( "#slider-range" ).on( "slide", function( event, ui ) {
-//        console.log("values: ", ui.values);
-//        $('#amount')[0].innerHTML = ui.values[0] + " - " + ui.values[1];
-//    } );
-
     $(function() {
         $( "#slider-range" ).slider({
             range: true,
