@@ -115,6 +115,27 @@ $( document ).ready(function(){
         removeLines();
         drawLines(googleMap);
     });
+
+//    $( "#slider-range" ).on( "slide", function( event, ui ) {
+//        console.log("values: ", ui.values);
+//        $('#amount')[0].innerHTML = ui.values[0] + " - " + ui.values[1];
+//    } );
+
+    $(function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 120,
+            values: [ 0, 115 ],
+            slide: function( event, ui ) {
+                $('#amount')[0].innerHTML = ui.values[0] + " - " + ui.values[1];
+            }
+    });
+
+    $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) +
+    " - " + $( "#slider-range" ).slider( "values", 1 ) );
+    });
+
 });
 
 

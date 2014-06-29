@@ -220,6 +220,45 @@ html, body
     width: 100%;
 }
 
+#slider-range
+{
+    background: url("../images/sliderBackground.png");
+    border: none;
+    width: 369px !important;
+    height: 71px;
+    right: 60px;
+    bottom: 60px;
+    z-index: 1;
+    margin: 0 !important;
+    position: absolute;
+}
+.ui-slider-handle
+{
+    background: url("../images/sliderButton.png") !important;
+    border: none !important;
+    top: 14px !important;
+    width: 14px !important;
+    height: 13px !important;
+    margin: 0 !important;
+    outline: none;
+    /*margin-left: 1px !important;*/
+}
+
+.ui-slider-range
+{
+    background-color: #fdfdfd !important;
+    height: 3px !important;
+    top: 19px !important;
+}
+
+#amount
+{
+    position: absolute;
+    top: 38px;
+    left: 100px;
+    z-index: 1;
+}
+
 #about
 {
     color: #d7d7d7;
@@ -228,6 +267,8 @@ html, body
     left: 50px;
     width: 315px;
     height: 320px;
+
+    font-family: 'courier', sans-serif;
 }
 
 #signInSection
@@ -239,6 +280,11 @@ html, body
     width: 315px;
 }
 
+.signInLabel
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
 #signIn
 {
     color: #474747;
@@ -247,6 +293,8 @@ html, body
     font-size: 14px;
     text-align: center;
     padding-top: 18px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
 
     float: left;
     width: 315px;
