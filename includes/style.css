@@ -74,9 +74,9 @@ html, body
     width: 100%;
 }
 
-#zoomOutButton
+#zoomButton
 {
-    background-image: url("../images/zoomOutButton.png");
+    background-image: url("../images/zoomOutBackground.png");
     height: 38px;
     width: 38px;
     position: absolute;

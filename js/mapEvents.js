@@ -4,6 +4,7 @@
 
 
 var zoomOutCenter = new google.maps.LatLng(50.370519205127344, -37.12453125000003);
+var zoomInCenter= new google.maps.LatLng(32.06, 34.77);
 var deviceFilterOn = false;
 var dayNightFilterOn = false;
 
@@ -14,21 +15,23 @@ function addListenerToMap(googleMap)
         var zoomLevel = googleMap.getZoom();
         console.log("Zoom Level = " + zoomLevel);
 
-        if (zoomLevel < 7) // Remove the markers and zoom button. Draw the lines.
+        if (zoomLevel < 7) // Remove the markers and Draw the lines.
         {
             drawLines(googleMap);
             removeMarkers();
-            $('#zoomOutButton').hide();
+            $('#zoomButton').attr( "title", "Zoom In" );
+            $('#zoomButton').css("background-image", "url(images/zoomInBackground.png)");
             $('#miniMapFrame').hide(200);
             $('#slider-range').show();
             $('#filters').show()
         }
-        else // Draw the markers and zoom button. Remove the lines.
+        else // Draw the markers and Remove the lines.
         {
             removeLines();
             //display the markers
             displayMarkers(googleMap);
-            $('#zoomOutButton').show();
+            $('#zoomButton').attr( "title", "Zoom Out" );
+            $('#zoomButton').css("background-image", "url(images/zoomOutBackground.png)");
             $('#slider-range').hide();
             $('#filters').hide();
 
@@ -73,14 +76,31 @@ $( document ).ready(function(){
     $('#slider-range').hide();
     $('#filters').hide();
 
-    $('#zoomOutButton').click(function(){
-        console.log("zoomOutButton Clicked");
-        $('#miniMapFrame').hide(200);
-        if (currentOpenMarker != null){
-            currentOpenMarker.infoWindow.close();
+
+    $('#zoomButton').click(function(){
+        console.log("zoomButton Clicked");
+
+        if(googleMap.getZoom() >= 7){
+            $('#miniMapFrame').hide(200);
+            if (currentOpenMarker != null){
+                currentOpenMarker.infoWindow.close();
+            }
+            googleMap.setZoom(3);
+            googleMap.panTo(zoomOutCenter);
+            $('#zoomButton').attr( "title", "Zoom In" );
+            $('#zoomButton').css("background-image", "url(images/zoomInBackground.png)");
         }
-        googleMap.setZoom(3);
-        googleMap.panTo(zoomOutCenter);
+        else{
+            if (currentOpenMarker != null){
+                $('#miniMapFrame').show(200);
+                currentOpenMarker.infoWindow.open();
+            }
+            googleMap.setZoom(13);
+            googleMap.panTo(zoomInCenter);
+            $('#zoomButton').attr( "title", "Zoom out" );
+            $('#zoomButton').css("background-image", "url(images/zoomOutBackground.png)");
+        }
+
     });
 
     $('#filterDayNight').click(function(){
