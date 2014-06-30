@@ -145,10 +145,11 @@ html, body
 }
 
 #filtersButtons
-{color: #ffffcc;
+{
+    color: #ffffcc;
     position: absolute;
     bottom: 50px;
-    right: 50%;
+    right: 660px;
     background-image: url("../images/filtersBackground.png");
     height: 71px;
     width: 169px;
