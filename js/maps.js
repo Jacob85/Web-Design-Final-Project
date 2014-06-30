@@ -94,7 +94,9 @@ function putMarkers(historyData){
             strokeWeight: 2,
             geodesic: true,
             map: null,
-            lineColor: history.lineColor
+            lineColor: history.lineColor,
+            show: true,
+            date: history.date
         });
 
         var infoBodyIconClass;

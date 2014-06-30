@@ -124,9 +124,10 @@ $( document ).ready(function(){
             values: [ 1, 91 ],
             slide: function( event, ui ) {
                 calculateDateFromAmount(ui);
+                showHideLines(ui);
             }
-    })});
-
+        })
+    });
 });
 
 
@@ -146,29 +147,54 @@ function removeLines()
 
 function drawLines(googleMap)
 {
-    if(googleMap == null){
-        lines.forEach(function(line){
+    lines.forEach(function(line){
+        if(line.show == false || googleMap == null){
             line.setMap(null);
-        });
-    }
-    else if(deviceFilterOn){
-        lines.forEach(function(line){
+        }
+        else if(deviceFilterOn){
             line.strokeColor = line.lineColor.device;
             line.setMap(googleMap);
-        });
-    }
-    else if(dayNightFilterOn){
-        lines.forEach(function(line){
+        }
+        else if(dayNightFilterOn){
             line.strokeColor = line.lineColor.ampm;
             line.setMap(googleMap);
-        });
-    }
-    else{
-        lines.forEach(function(line){
+        }
+        else{
             line.strokeColor = line.lineColor.none;
             line.setMap(googleMap);
-        });
+        }
+    });
+}
+
+function showHideLines(ui){
+    console.log("show hide");
+    lines.forEach(function(line){
+        var val = getValFromDate(line.date);
+
+        if(val >= ui.values[0] && val <= ui.values[1] ){
+            line.show = true;console.log("show");
+        }
+        else{
+            line.show = false;console.log("hide");
+        }
+    });
+
+    drawLines(googleMap);
+}
+
+function getValFromDate(date){
+    var res;
+
+    res = parseInt(date.substr(4, 2));
+
+    switch (date.substr(0, 3)){
+        case 'APR': break;
+        case 'MAY': res += 30; break;
+        case 'JUN': res += 61; break;
+        case 'JUL': res += 106; break;
     }
+
+    return res - 14;
 }
 
 function calculateDateFromAmount(ui){
