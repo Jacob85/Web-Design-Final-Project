@@ -20,6 +20,8 @@ function addListenerToMap(googleMap)
             removeMarkers();
             $('#zoomOutButton').hide();
             $('#miniMapFrame').hide(200);
+            $('#slider-range').show();
+            $('#filters').show()
         }
         else // Draw the markers and zoom button. Remove the lines.
         {
@@ -27,6 +29,8 @@ function addListenerToMap(googleMap)
             //display the markers
             displayMarkers(googleMap);
             $('#zoomOutButton').show();
+            $('#slider-range').hide();
+            $('#filters').hide();
 
             // If any marker's info window is open - show the mini map.
             if (currentOpenMarker != null && isInfoWindowOpen(currentOpenMarker.infoWindow)){
@@ -65,6 +69,9 @@ function setAllMarkerMap(map)
 $( document ).ready(function(){
 
     var path = window.location.pathname;
+
+    $('#slider-range').hide();
+    $('#filters').hide();
 
     $('#zoomOutButton').click(function(){
         console.log("zoomOutButton Clicked");
@@ -125,9 +132,15 @@ $( document ).ready(function(){
             slide: function( event, ui ) {
                 calculateDateFromAmount(ui);
                 showHideLines(ui);
+
             }
-        })
+        });
+
+        document.getElementById("slider-range").childNodes[13].className += " leftHandle";
+        document.getElementById("slider-range").childNodes[12].className += " rightHandle";
     });
+
+
 });
 
 

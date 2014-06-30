@@ -240,9 +240,17 @@ html, body
     top: 14px !important;
     width: 14px !important;
     height: 13px !important;
-    margin: 0 !important;
     outline: none;
-    /*margin-left: 1px !important;*/
+}
+
+.leftHandle
+{
+    margin-left: -15px !important;
+}
+
+.rightHandle
+{
+    margin-left: 1px !important;
 }
 
 .ui-slider-range
@@ -250,6 +258,7 @@ html, body
     background-color: #fdfdfd !important;
     height: 3px !important;
     top: 19px !important;
+    max-width: 360px;
 }
 
 #amount
