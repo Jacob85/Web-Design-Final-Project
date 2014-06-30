@@ -81,20 +81,12 @@ $( document ).ready(function(){
         console.log("zoomButton Clicked");
 
         if(googleMap.getZoom() >= 7){
-            $('#miniMapFrame').hide(200);
-            if (currentOpenMarker != null){
-                currentOpenMarker.infoWindow.close();
-            }
             googleMap.setZoom(3);
             googleMap.panTo(zoomOutCenter);
             $('#zoomButton').attr( "title", "Zoom In" );
             $('#zoomButton').css("background-image", "url(images/zoomInBackground.png)");
         }
         else{
-            if (currentOpenMarker != null){
-                $('#miniMapFrame').show(200);
-                currentOpenMarker.infoWindow.open();
-            }
             googleMap.setZoom(13);
             googleMap.panTo(zoomInCenter);
             $('#zoomButton').attr( "title", "Zoom out" );
