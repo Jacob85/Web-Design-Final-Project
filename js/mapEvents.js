@@ -216,7 +216,7 @@ function getValFromDate(date){
         case 'apr': break;
         case 'may': res += 30; break;
         case 'jun': res += 61; break;
-        case 'jul': res += 106; break;
+        case 'jul': res += 91; break;
     }
 
     return res - 14;
