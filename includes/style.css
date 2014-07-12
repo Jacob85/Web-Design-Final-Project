@@ -173,49 +173,50 @@ html, body
 {
     color: #ffffcc;
     position: absolute;
-    bottom: 50px;
+    bottom: 35px;
     right: 660px;
     background-image: url("../images/filtersBackground.png");
-    height: 71px;
-    width: 169px;
+    height: 76px;
+    width: 167px;
 }
 
 #filterDayNight
 {
     position: absolute;
-    top: 16px;
-    width: 82px;
-    height: 57px;
+    bottom: 12px;
+    left: 25px;
+    width: 33px;
+    height: 33px;
     background-image: url("../images/filterDayNight.png");
-    background-size:100% 100%;
 }
 
 #filterDayNight:hover
 {
-    top: 14px;
-    left: -2px;
-    width: 86px;
-    height: 61px;
+    bottom: 10px;
+    left: 23px;
+    width: 37px;
+    height: 37px;
     cursor: pointer;
+    background-size: 100%;
 }
 
 #filterDevice
 {
     position: absolute;
-    left: 82px;
-    top: 16px;
-    width: 82px;
-    height: 57px;
+    bottom: 12px;
+    right: 15px;
+    width: 53px;
+    height: 33px;
     background-image: url("../images/filterDevice.png");
     background-size:100% 100%;
 }
 
 #filterDevice:hover
 {
-    top: 14px;
-    left: 80px;
-    width: 86px;
-    height: 61px;
+    bottom: 10px;
+    right: 13px;
+    width: 57px;
+    height: 37px;
 }
 
 #pageHeader{
