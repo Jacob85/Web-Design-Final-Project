@@ -47,8 +47,8 @@ html, body
 #miniMapFrame
 {
     position: absolute;
-    bottom: 5%;
-    left: 5%;
+    bottom: 35px;
+    left: 35px;
     width: 326px;
     height: 246px;
 
@@ -248,15 +248,24 @@ html, body
     left: 351px;
 }
 
-#slider-range
+#sliderContainer
 {
     background: url("../images/sliderBackground.png");
-    border: none;
-    border-radius: inherit;
-    width: 396px !important;
+    position: absolute;
+    width: 396px;
     height: 76px;
     right: 141px;
     bottom: 35px;
+}
+
+#slider-range
+{
+    background: none;
+    border: none;
+    border-radius: inherit;
+    width: 360px !important;
+    height: 76px;
+    left: 24px;
     z-index: 1;
     margin: 0 !important;
     position: absolute;
@@ -273,12 +282,12 @@ html, body
 
 .leftHandle
 {
-    margin-left: -22px !important;
+    /*margin-left: -22px !important;*/
 }
 
 .rightHandle
 {
-    margin-left: 13px !important;
+    /*margin-left: 13px !important;*/
 }
 
 .ui-slider-range
@@ -286,15 +295,18 @@ html, body
     background-color: #fdfdfd !important;
     height: 2px !important;
     top: 37px !important;
-    max-width: 360px;
-    margin-left: 20px;
+    left: 30px;
+;
+
+    /*max-width: 360px;*/
+    /*margin-left: 20px;*/
 }
 
 #amount
 {
     position: absolute;
     top: 10px;
-    left: 112px;
+    left: 90px;
     z-index: 1;
     font-size: 12px;
     font-weight: 600;

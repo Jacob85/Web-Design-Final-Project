@@ -23,7 +23,7 @@ function addListenerToMap(googleMap)
             $('#zoomButton').css("background-image", "url(images/zoomInButton.png)");
             $('#zoomButtonBackground').css("background-image", "url(images/zoomInBackground.png)");
             $('#miniMapFrame').hide(200);
-            $('#slider-range').show();
+            $('#sliderContainer').show();
             $('#filters').show()
         }
         else // Draw the markers and Remove the lines.
@@ -34,7 +34,7 @@ function addListenerToMap(googleMap)
             $('#zoomButton').attr( "title", "Zoom Out" );
             $('#zoomButton').css("background-image", "url(images/zoomOutButton.png)");
             $('#zoomButtonBackground').css("background-image", "url(images/zoomOutBackground.png)");
-            $('#slider-range').hide();
+            $('#sliderContainer').hide();
             $('#filters').hide();
 
             // If any marker's info window is open - show the mini map.
@@ -75,7 +75,7 @@ $( document ).ready(function(){
 
     var path = window.location.pathname;
 
-    $('#slider-range').hide();
+    $('#sliderContainer').hide();
     $('#filters').hide();
 
 
