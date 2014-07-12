@@ -11,8 +11,6 @@ $(document).ready(function(){
 
 function populateViews(response)
 {
-    var index = 0;
-
     for (var i =0 ; i < response.articles.length ; i++)
     {
         $('<article class="first_page_article">'+response.articles[i].content +'</article><br>').appendTo('#about');

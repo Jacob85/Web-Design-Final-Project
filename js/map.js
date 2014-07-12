@@ -15,6 +15,9 @@ var miniMapCenter;
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+/**
+ * Initialize the map on load.
+ */
 function initialize()
 {
     var mapOptions = {
@@ -33,7 +36,7 @@ function initialize()
     })
         .done(function(historyData) {
             /* Adding markers to the googleMap */
-            putMarkers(historyData);
+            createMapElements(historyData);
         });
 
     /* Adding style to the googleMap */
@@ -59,8 +62,8 @@ function initMiniMap(lat, lng){
     miniMap.setOptions({styles: ns_data.styles});
 }
 
-// Put all the markers and info windows on the map.
-function putMarkers(historyData){
+// Put all elements like markers and info windows on the map.
+function createMapElements(historyData){
     var index = 0; // Current marker index.
 
     // Transform the json object to array.
