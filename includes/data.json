@@ -4,11 +4,11 @@
         "locationY": "34.77",
         "destinationX": "37.10",
         "destinationY": "-119.60",
-        "favicon": "http://www.facebook.com/favicon.ico",
-        "title": "Facebook",
-        "date": "APR 15 2014 - 9:45 AM",
+        "favicon": "http://www.payngo.co.il/assets/favicon-44996770c2c0fe57af62e15dbdbfe9bf.ico",
+        "title": "Pay N Go",
+        "date": "APR 16 2014 - 9:45 AM",
         "address": "Panorama Building, Tel-aviv",
-        "siteLink": "http://www.facebook.com",
+        "siteLink": "http://www.payngo.co.il/",
         "infoWindowId": "infoWindow1",
         "lineColor":
             {
@@ -23,11 +23,11 @@
         "locationY": "34.774271",
         "destinationX": "34.50",
         "destinationY": "-118.3",
-        "favicon": "images/iconGoogle.png",
-        "title": "Google",
+        "favicon": "http://my.ebay.com/favicon.ico",
+        "title": "eBay",
         "date": "APR 21 2014 - 11:30 PM",
         "address": "Ben Yehuda, Tel-aviv",
-        "siteLink": "http://www.google.com",
+        "siteLink": "http://www.ebay.com/",
         "infoWindowId": "infoWindow2",
         "lineColor":
             {
@@ -80,11 +80,11 @@
         "locationY": "34.753581",
         "destinationX": "11.904556",
         "destinationY": "76.953049",
-        "favicon": "images/iconGoogle.png",
-        "title": "Google",
+        "favicon": "http://www.nrg.co.il/online/nrg/include/img/favicon.ico",
+        "title": "NRG",
         "date": "MAY 3 2014 - 6:30 PM",
         "address": "Shivti Israel, Tel-aviv",
-        "siteLink": "http://www.google.com",
+        "siteLink": "http://www.nrg.co.il/",
         "infoWindowId": "infoWindow5",
         "lineColor":
         {
@@ -99,11 +99,11 @@
         "locationY": "34.803049",
         "destinationX": "41.17",
         "destinationY": "-74.02",
-        "favicon": "http://www.youtube.com/favicon.ico",
-        "title": "YouTube",
+        "favicon": "http://www.android.com/new/images/favicon.ico",
+        "title": "Android",
         "date": "MAY 3 2014 - 10:20 PM",
         "address": "Shenkar, Ramat Gan",
-        "siteLink": "http://www.youtube.com",
+        "siteLink": "http://www.android.com/",
         "infoWindowId": "infoWindow6",
         "lineColor":
         {
@@ -118,11 +118,11 @@
         "locationY": "34.866614",
         "destinationX": "52.896892",
         "destinationY": "-8.486316",
-        "favicon": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Wikipedia_new_favicon.png",
-        "title": "Wikipedia",
+        "favicon": "http://www.guitarcenter.com/Includes/GuitarCenter/images/favicon.ico",
+        "title": "Guitar Center",
         "date": "MAY 4 2014 - 1:45 AM",
         "address": "Ahuza St, Ra'anana",
-        "siteLink": "https://en.wikipedia.org",
+        "siteLink": "http://www.guitarcenter.com/?nce=1",
         "infoWindowId": "infoWindow7",
         "lineColor":
         {
@@ -137,11 +137,11 @@
         "locationY": "34.780440",
         "destinationX": "56.108758",
         "destinationY": "37.608948",
-        "favicon": "images/iconGoogle.png",
-        "title": "Google",
+        "favicon": "http://www.haaretz.co.il/htz/images/favicon.ico",
+        "title": "Haaretz",
         "date": "MAY 15 2014 - 9:30 PM",
         "address": "Sokolov St, Holon",
-        "siteLink": "http://www.google.com",
+        "siteLink": "http://www.haaretz.co.il/",
         "infoWindowId": "infoWindow8",
         "lineColor":
         {
@@ -156,11 +156,11 @@
         "locationY": "34.848032",
         "destinationX": "38.390714",
         "destinationY": "-77.117737",
-        "favicon": "http://www.abine.com/trackr/mini/cnn.com.png",
-        "title": "CNN",
+        "favicon": "http://www.green-israel.co.il/templates/shaper_megadeal/favicon.ico",
+        "title": "Green",
         "date": "JUN 6 2014 - 8:30 PM",
         "address": "Sokolov St , Herzliya",
-        "siteLink": "http://www.cnn.com",
+        "siteLink": "http://www.green-israel.co.il/",
         "infoWindowId": "infoWindow9",
         "lineColor":
         {
@@ -175,11 +175,11 @@
         "locationY": "34.767866",
         "destinationX": "13.5",
         "destinationY": "77.599182",
-        "favicon": "http://www.abine.com/trackr/mini/cnn.com.png",
-        "title": "CNN",
+        "favicon": "http://www.shufersal.co.il/_layouts/images/favicon.ico",
+        "title": "Shufersal",
         "date": "JUN 17 2014 - 2:10 AM",
         "address": "Eilat St, Tel-Aviv",
-        "siteLink": "http://www.cnn.com",
+        "siteLink": "http://www.shufersal.co.il/Pages/homepage.aspx",
         "infoWindowId": "infoWindow10",
         "lineColor":
         {
