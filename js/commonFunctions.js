@@ -18,5 +18,4 @@ function populateViews(response)
 
     $('.signInLabel').html(response.label);
     $('#signIn').html(response.loginEmail);
-
 }
