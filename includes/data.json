@@ -40,8 +40,8 @@
     {
         "locationX": "32.08",
         "locationY": "34.77",
-        "destinationX": "41.11",
-        "destinationY": "-74.12",
+        "destinationX": "44.1",
+        "destinationY": "-79.32",
         "favicon": "http://www.youtube.com/favicon.ico",
         "title": "YouTube",
         "date": "APR 22 2014 - 3:20 PM",
@@ -59,8 +59,8 @@
     {
         "locationX": "32.0478",
         "locationY": "34.7790",
-        "destinationX": "12.977795",
-        "destinationY": "77.599182",
+        "destinationX": "22.977795",
+        "destinationY": "79.599182",
         "favicon": "http://www.facebook.com/favicon.ico",
         "title": "Facebook",
         "date": "APR 30 2014 - 11:45 AM",
@@ -78,7 +78,7 @@
     {
         "locationX": "32.044205",
         "locationY": "34.753581",
-        "destinationX": "11.004556",
+        "destinationX": "11.904556",
         "destinationY": "76.953049",
         "favicon": "images/iconGoogle.png",
         "title": "Google",
@@ -97,8 +97,8 @@
     {
         "locationX": "32.089733",
         "locationY": "34.803049",
-        "destinationX": "41.11",
-        "destinationY": "-74.12",
+        "destinationX": "41.17",
+        "destinationY": "-74.02",
         "favicon": "http://www.youtube.com/favicon.ico",
         "title": "YouTube",
         "date": "MAY 3 2014 - 10:20 PM",
@@ -116,7 +116,7 @@
     {
         "locationX": "32.182151",
         "locationY": "34.866614",
-        "destinationX": "51.896892",
+        "destinationX": "52.896892",
         "destinationY": "-8.486316",
         "favicon": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Wikipedia_new_favicon.png",
         "title": "Wikipedia",
@@ -135,7 +135,7 @@
     {
         "locationX": "32.022486",
         "locationY": "34.780440",
-        "destinationX": "55.748758",
+        "destinationX": "56.108758",
         "destinationY": "37.608948",
         "favicon": "images/iconGoogle.png",
         "title": "Google",
@@ -154,8 +154,8 @@
     {
         "locationX": "32.167040",
         "locationY": "34.848032",
-        "destinationX": "22.390714",
-        "destinationY": "114.117737",
+        "destinationX": "38.390714",
+        "destinationY": "-77.117737",
         "favicon": "http://www.abine.com/trackr/mini/cnn.com.png",
         "title": "CNN",
         "date": "JUN 6 2014 - 8:30 PM",
@@ -173,7 +173,7 @@
     {
         "locationX": "32.059446",
         "locationY": "34.767866",
-        "destinationX": "12.977795",
+        "destinationX": "13.5",
         "destinationY": "77.599182",
         "favicon": "http://www.abine.com/trackr/mini/cnn.com.png",
         "title": "CNN",
@@ -192,7 +192,7 @@
     {
         "locationX": "32.073266",
         "locationY": "34.773896",
-        "destinationX": "32.874974",
+        "destinationX": "33.274974",
         "destinationY": "-96.814270",
         "favicon": "images/iconGoogle.png",
         "title": "Google",
@@ -211,7 +211,7 @@
     {
         "locationX": "32.192320",
         "locationY": "34.879832",
-        "destinationX": "41.865470",
+        "destinationX": "42.365470",
         "destinationY": "-87.672272",
         "favicon": "http://www.youtube.com/favicon.ico",
         "title": "YouTube",
@@ -230,7 +230,7 @@
     {
         "locationX": "32.170636",
         "locationY": "34.852774",
-        "destinationX": "40.423429",
+        "destinationX": "40.853429",
         "destinationY": "-3.709087",
         "favicon": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Wikipedia_new_favicon.png",
         "title": "Wikipedia",
@@ -249,8 +249,8 @@
     {
         "locationX": "32.064137",
         "locationY": "34.775087",
-        "destinationX": "53.359568",
-        "destinationY": "-6.264267",
+        "destinationX": "56.159568",
+        "destinationY": "-2.864267",
         "favicon": "images/iconGoogle.png",
         "title": "Google",
         "date": "JUL 2 2014 - 3:30 PM",
