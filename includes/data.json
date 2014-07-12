@@ -118,7 +118,7 @@
         "locationY": "34.866614",
         "destinationX": "51.896892",
         "destinationY": "-8.486316",
-        "favicon": "https://en.wikipedia.org/favicon.ico",
+        "favicon": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Wikipedia_new_favicon.png",
         "title": "Wikipedia",
         "date": "Jun 19 2014 - 1:45 AM",
         "address": "Ahuza St, Ra'anana",
@@ -156,12 +156,126 @@
         "locationY": "34.848032",
         "destinationX": "22.390714",
         "destinationY": "114.117737",
-        "favicon": "http://www.youtube.com/favicon.ico",
-        "title": "YouTube",
+        "favicon": "http://www.abine.com/trackr/mini/cnn.com.png",
+        "title": "CNN",
         "date": "JUN 17 2014 - 8:30 PM",
         "address": "Sokolov St , Herzliya",
-        "siteLink": "http://www.youtube.com",
+        "siteLink": "http://www.cnn.com",
         "infoWindowId": "infoWindow9",
+        "lineColor":
+        {
+            "device": "#16eb61",
+            "ampm": "#5e20d1",
+            "none": "6060f0"
+        },
+        "device": "mobile"
+    },
+    {
+        "locationX": "32.059446",
+        "locationY": "34.767866",
+        "destinationX": "12.977795",
+        "destinationY": "77.599182",
+        "favicon": "http://www.abine.com/trackr/mini/cnn.com.png",
+        "title": "CNN",
+        "date": "Jun 13 2014 - 2:10 AM",
+        "address": "Eilat St, Tel-Aviv",
+        "siteLink": "http://www.cnn.com",
+        "infoWindowId": "infoWindow10",
+        "lineColor":
+        {
+            "device": "#f107f1",
+            "ampm": "#ffe402",
+            "none": "6060f0"
+        },
+        "device": "desktop"
+    },
+    {
+        "locationX": "32.073266",
+        "locationY": "34.773896",
+        "destinationX": "32.874974",
+        "destinationY": "-96.814270",
+        "favicon": "images/iconGoogle.png",
+        "title": "Google",
+        "date": "MAY 17 2014 - 7:20 PM",
+        "address": "Meir Garden , Tel-aviv",
+        "siteLink": "http://www.google.com",
+        "infoWindowId": "infoWindow11",
+        "lineColor":
+        {
+            "device": "#18c9ef",
+            "ampm": "#5e20d1",
+            "none": "6060f0"
+        },
+        "device": "tablet"
+    },
+    {
+        "locationX": "32.192320",
+        "locationY": "34.879832",
+        "destinationX": "41.865470",
+        "destinationY": "-87.672272",
+        "favicon": "http://www.youtube.com/favicon.ico",
+        "title": "YouTube",
+        "date": "JUN 7 2014 - 10:20 PM",
+        "address": "Weizman St, Ra'anana",
+        "siteLink": "http://www.youtube.com",
+        "infoWindowId": "infoWindow12",
+        "lineColor":
+        {
+            "device": "#16eb61",
+            "ampm": "#5e20d1",
+            "none": "6060f0"
+        },
+        "device": "mobile"
+    },
+    {
+        "locationX": "32.170636",
+        "locationY": "34.852774",
+        "destinationX": "40.423429",
+        "destinationY": "-3.709087",
+        "favicon": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Wikipedia_new_favicon.png",
+        "title": "Wikipedia",
+        "date": "Jun 9 2014 - 5:25 AM",
+        "address": "Derech Jerusalem, Herzliya",
+        "siteLink": "https://en.wikipedia.org",
+        "infoWindowId": "infoWindow13",
+        "lineColor":
+        {
+            "device": "#f107f1",
+            "ampm": "#ffe402",
+            "none": "6060f0"
+        },
+        "device": "desktop"
+    },
+    {
+        "locationX": "32.064137",
+        "locationY": "34.775087",
+        "destinationX": "53.359568",
+        "destinationY": "-6.264267",
+        "favicon": "images/iconGoogle.png",
+        "title": "Google",
+        "date": "MAY 9 2014 - 3:30 PM",
+        "address": "Max Brenner , Tel-Aviv",
+        "siteLink": "http://www.google.com",
+        "infoWindowId": "infoWindow14",
+        "lineColor":
+        {
+            "device": "#18c9ef",
+            "ampm": "#5e20d1",
+            "none": "6060f0"
+        },
+        "device": "tablet"
+    },
+    {
+        "locationX": "32.074138",
+        "locationY": "34.778273",
+        "destinationX": "22.390714",
+        "destinationY": "114.117737",
+        "favicon": "http://www.abine.com/trackr/mini/cnn.com.png",
+        "title": "CNN",
+        "date": "JUN 17 2014 - 8:30 PM",
+        "address": "Dizingof St , Tel-Aviv",
+        "siteLink": "http://www.youtube.com",
+        "infoWindowId": "infoWindow15",
         "lineColor":
         {
             "device": "#16eb61",
