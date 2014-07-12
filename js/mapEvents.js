@@ -20,7 +20,8 @@ function addListenerToMap(googleMap)
             drawLines(googleMap);
             removeMarkers();
             $('#zoomButton').attr( "title", "Zoom In" );
-            $('#zoomButton').css("background-image", "url(images/zoomInBackground.png)");
+            $('#zoomButton').css("background-image", "url(images/zoomInButton.png)");
+            $('#zoomButtonBackground').css("background-image", "url(images/zoomInBackground.png)");
             $('#miniMapFrame').hide(200);
             $('#slider-range').show();
             $('#filters').show()
@@ -31,7 +32,8 @@ function addListenerToMap(googleMap)
             //display the markers
             displayMarkers(googleMap);
             $('#zoomButton').attr( "title", "Zoom Out" );
-            $('#zoomButton').css("background-image", "url(images/zoomOutBackground.png)");
+            $('#zoomButton').css("background-image", "url(images/zoomOutButton.png)");
+            $('#zoomButtonBackground').css("background-image", "url(images/zoomOutBackground.png)");
             $('#slider-range').hide();
             $('#filters').hide();
 
@@ -84,13 +86,15 @@ $( document ).ready(function(){
             googleMap.setZoom(3);
             googleMap.panTo(zoomOutCenter);
             $('#zoomButton').attr( "title", "Zoom In" );
-            $('#zoomButton').css("background-image", "url(images/zoomInBackground.png)");
+            $('#zoomButton').css("background-image", "url(images/zoomInButton.png)");
+            $('#zoomButtonBackground').css("background-image", "url(images/zoomInBackground.png)");
         }
         else{
             googleMap.setZoom(13);
             googleMap.panTo(zoomInCenter);
             $('#zoomButton').attr( "title", "Zoom out" );
-            $('#zoomButton').css("background-image", "url(images/zoomOutBackground.png)");
+            $('#zoomButton').css("background-image", "url(images/zoomOutButton.png)");
+            $('#zoomButtonBackground').css("background-image", "url(images/zoomOutBackground.png)");
         }
 
     });
