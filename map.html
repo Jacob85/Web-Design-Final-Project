@@ -17,7 +17,7 @@
 </head>
 <body>
 <div id="wrapper">
-    <a id="logo" href="index.html"></a>
+    <a id="logo" class="inMapLogo" href="index.html"></a>
 
     <div id="mainMap"></div>
 
@@ -34,16 +34,16 @@
         </div>
     </section>
 
-    <div id="slider-range">
-        <label id="amount">15/04/2014 - 14/07/2014</label>
-        <label class="slider-date" id="apr">APR</label>
-        <label class="slider-date" id="may">MAY</label>
-        <label class="slider-date" id="jun">JUN</label>
-        <label class="slider-date" id="jul">JUL</label>
+    <div id="sliderContainer">
+        <div id="slider-range">
+            <label id="amount">15/04/2014 - 14/07/2014</label>
+        </div>
     </div>
 
     <!-- Button for zooming in & out -->
-    <a href="#" id="zoomButton" title="Zoom Out"></a>
+    <div id="zoomButtonBackground">
+        <a href="#" id="zoomButton" title="Zoom Out"></a>
+    </div>
 </div>
 </body>
 </html>

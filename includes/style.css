@@ -27,6 +27,11 @@ html, body
     background-color: #000000;
 }
 
+#pageHeader{
+    height: 100px;
+    width: 100%;
+}
+
 #logo
 {
     position: absolute;
@@ -38,11 +43,17 @@ html, body
     z-index: 1;
 }
 
+.inMapLogo
+{
+    top: 10px !important;
+    left: 10px !important;
+}
+
 #miniMapFrame
 {
     position: absolute;
-    bottom: 5%;
-    left: 5%;
+    bottom: 35px;
+    left: 35px;
     width: 326px;
     height: 246px;
 
@@ -74,14 +85,33 @@ html, body
     width: 100%;
 }
 
-#zoomButton
+#zoomButtonBackground
 {
     background-image: url("../images/zoomOutBackground.png");
-    height: 38px;
-    width: 38px;
+    width: 77px;
+    height: 76px;
     position: absolute;
-    bottom: 5%;
-    right: 5%;
+    bottom: 35px;
+    right: 35px;
+}
+
+#zoomButton
+{
+    background-image: url("../images/zoomOutButton.png");
+    height: 33px;
+    width: 33px;
+    position: absolute;
+    bottom: 12px;
+    right: 22px;
+}
+
+#zoomButton:hover
+{
+    height: 37px;
+    width: 37px;
+    bottom: 10px;
+    right: 20px;
+    background-size: 100%;
 }
 
 .infoWindow{
@@ -148,88 +178,70 @@ html, body
 {
     color: #ffffcc;
     position: absolute;
-    bottom: 50px;
-    right: 660px;
+    bottom: 35px;
+    right: 567px;
     background-image: url("../images/filtersBackground.png");
-    height: 71px;
-    width: 169px;
+    height: 76px;
+    width: 167px;
 }
 
 #filterDayNight
 {
     position: absolute;
-    top: 16px;
-    width: 82px;
-    height: 57px;
+    bottom: 12px;
+    left: 25px;
+    width: 33px;
+    height: 33px;
     background-image: url("../images/filterDayNight.png");
-    background-size:100% 100%;
 }
 
 #filterDayNight:hover
 {
-    top: 14px;
-    left: -2px;
-    width: 86px;
-    height: 61px;
+    bottom: 10px;
+    left: 23px;
+    width: 37px;
+    height: 37px;
     cursor: pointer;
+    background-size: 100%;
 }
 
 #filterDevice
 {
     position: absolute;
-    left: 82px;
-    top: 16px;
-    width: 82px;
-    height: 57px;
+    bottom: 12px;
+    right: 15px;
+    width: 53px;
+    height: 33px;
     background-image: url("../images/filterDevice.png");
     background-size:100% 100%;
 }
 
 #filterDevice:hover
 {
-    top: 14px;
-    left: 80px;
-    width: 86px;
-    height: 61px;
+    bottom: 10px;
+    right: 13px;
+    width: 57px;
+    height: 37px;
 }
 
-#pageHeader{
-    height: 100px;
-    width: 100%;
-}
-
-.slider-date
+#sliderContainer
 {
-    color: #aaaaaa;
-    font-size: 11px;
+    background: url("../images/sliderBackground.png");
     position: absolute;
-    top: -10px;
-}
-
-#apr{
-    left: -4px;
-}
-
-#may{
-    left: 114px;
-}
-
-#jun{
-    left: 232px;
-}
-
-#jul{
-    left: 351px;
+    width: 396px;
+    height: 76px;
+    right: 141px;
+    bottom: 35px;
 }
 
 #slider-range
 {
-    background: url("../images/sliderBackground.png");
+    background: none;
     border: none;
-    width: 369px !important;
-    height: 71px;
-    right: 200px;
-    bottom: 45px;
+    border-radius: inherit;
+    width: 360px !important;
+    height: 76px;
+    left: 24px;
     z-index: 1;
     margin: 0 !important;
     position: absolute;
@@ -238,35 +250,25 @@ html, body
 {
     background: url("../images/sliderButton.png") !important;
     border: none !important;
-    top: 14px !important;
+    top: 30px !important;
     width: 14px !important;
     height: 13px !important;
     outline: none;
 }
 
-.leftHandle
-{
-    margin-left: -15px !important;
-}
-
-.rightHandle
-{
-    margin-left: 1px !important;
-}
-
 .ui-slider-range
 {
     background-color: #fdfdfd !important;
-    height: 3px !important;
-    top: 19px !important;
-    max-width: 360px;
+    height: 2px !important;
+    top: 37px !important;
+    left: 30px;
 }
 
 #amount
 {
     position: absolute;
-    top: 38px;
-    left: 100px;
+    top: 10px;
+    left: 90px;
     z-index: 1;
     font-size: 12px;
     font-weight: 600;
@@ -280,10 +282,11 @@ html, body
     position: absolute;
     top: 100px;
     left: 50px;
-    width: 315px;
+    width: 330px;
     height: 320px;
 
     font-family: 'courier', sans-serif;
+    line-height: 20px;
 }
 
 #signInSection
