@@ -193,15 +193,14 @@ function drawLines(googleMap)
 }
 
 function showHideLines(ui){
-    console.log("show hide");
     lines.forEach(function(line){
         var val = getValFromDate(line.date);
 
         if(val >= ui.values[0] && val <= ui.values[1] ){
-            line.show = true;console.log("show");
+            line.show = true;
         }
         else{
-            line.show = false;console.log("hide");
+            line.show = false;
         }
     });
 
@@ -213,11 +212,11 @@ function getValFromDate(date){
 
     res = parseInt(date.substr(4, 2));
 
-    switch (date.substr(0, 3)){
-        case 'APR': break;
-        case 'MAY': res += 30; break;
-        case 'JUN': res += 61; break;
-        case 'JUL': res += 106; break;
+    switch (date.substr(0, 3).toLowerCase()){
+        case 'apr': break;
+        case 'may': res += 30; break;
+        case 'jun': res += 61; break;
+        case 'jul': res += 106; break;
     }
 
     return res - 14;
