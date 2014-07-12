@@ -5,9 +5,9 @@
         "destinationX": "37.10",
         "destinationY": "-119.60",
         "favicon": "http://www.facebook.com/favicon.ico",
-        "title": "first marker",
+        "title": "Facebook",
         "date": "APR 30 2014 - 9:45 AM",
-        "address": "Dizingoff, Tel-aviv",
+        "address": "Panorama Building, Tel-aviv",
         "siteLink": "http://www.facebook.com",
         "infoWindowId": "infoWindow1",
         "lineColor":
@@ -19,14 +19,14 @@
         "device": "desktop"
     },
     {
-        "locationX": "32.06",
-        "locationY": "34.79",
+        "locationX": "32.090828",
+        "locationY": "34.774271",
         "destinationX": "34.50",
         "destinationY": "-118.3",
         "favicon": "images/iconGoogle.png",
-        "title": "second marker",
+        "title": "Google",
         "date": "MAY 31 2014 - 11:30 PM",
-        "address": "Namir, Tel-aviv",
+        "address": "Ben Yehuda, Tel-aviv",
         "siteLink": "http://www.google.com",
         "infoWindowId": "infoWindow2",
         "lineColor":
@@ -43,9 +43,9 @@
         "destinationX": "41.11",
         "destinationY": "-74.12",
         "favicon": "http://www.youtube.com/favicon.ico",
-        "title": "third marker",
-        "date": "JUN 30 2014 - 15:20 PM",
-        "address": "Even gvirol, Tel-aviv",
+        "title": "YouTube",
+        "date": "JUN 30 2014 - 3:20 PM",
+        "address": "Frishman St, Tel-aviv",
         "siteLink": "http://www.youtube.com",
         "infoWindowId": "infoWindow3",
         "lineColor":
@@ -54,6 +54,120 @@
                 "ampm": "#5e20d1",
                 "none": "6060f0"
             },
+        "device": "mobile"
+    },
+    {
+        "locationX": "32.0478",
+        "locationY": "34.7790",
+        "destinationX": "12.977795",
+        "destinationY": "77.599182",
+        "favicon": "http://www.facebook.com/favicon.ico",
+        "title": "Facebook",
+        "date": "Jun 3 2014 - 11:45 AM",
+        "address": "Kibutz Galuyot, Tel-aviv",
+        "siteLink": "http://www.facebook.com",
+        "infoWindowId": "infoWindow4",
+        "lineColor":
+        {
+            "device": "#f107f1",
+            "ampm": "#ffe402",
+            "none": "6060f0"
+        },
+        "device": "desktop"
+    },
+    {
+        "locationX": "32.044205",
+        "locationY": "34.753581",
+        "destinationX": "11.004556",
+        "destinationY": "76.953049",
+        "favicon": "images/iconGoogle.png",
+        "title": "Google",
+        "date": "MAY 15 2014 - 6:30 PM",
+        "address": "Shivti Israel, Tel-aviv",
+        "siteLink": "http://www.google.com",
+        "infoWindowId": "infoWindow5",
+        "lineColor":
+        {
+            "device": "#18c9ef",
+            "ampm": "#5e20d1",
+            "none": "6060f0"
+        },
+        "device": "tablet"
+    },
+    {
+        "locationX": "32.089733",
+        "locationY": "34.803049",
+        "destinationX": "41.11",
+        "destinationY": "-74.12",
+        "favicon": "http://www.youtube.com/favicon.ico",
+        "title": "YouTube",
+        "date": "JUN 7 2014 - 10:20 PM",
+        "address": "Shenkar, Ramat Gan",
+        "siteLink": "http://www.youtube.com",
+        "infoWindowId": "infoWindow6",
+        "lineColor":
+        {
+            "device": "#16eb61",
+            "ampm": "#5e20d1",
+            "none": "6060f0"
+        },
+        "device": "mobile"
+    },
+    {
+        "locationX": "32.182151",
+        "locationY": "34.866614",
+        "destinationX": "51.896892",
+        "destinationY": "-8.486316",
+        "favicon": "https://en.wikipedia.org/favicon.ico",
+        "title": "Wikipedia",
+        "date": "Jun 19 2014 - 1:45 AM",
+        "address": "Ahuza St, Ra'anana",
+        "siteLink": "https://en.wikipedia.org",
+        "infoWindowId": "infoWindow7",
+        "lineColor":
+        {
+            "device": "#f107f1",
+            "ampm": "#ffe402",
+            "none": "6060f0"
+        },
+        "device": "desktop"
+    },
+    {
+        "locationX": "32.022486",
+        "locationY": "34.780440",
+        "destinationX": "55.748758",
+        "destinationY": "37.608948",
+        "favicon": "images/iconGoogle.png",
+        "title": "Google",
+        "date": "MAY 5 2014 - 9:30 PM",
+        "address": "Sokolov St, Holon",
+        "siteLink": "http://www.google.com",
+        "infoWindowId": "infoWindow8",
+        "lineColor":
+        {
+            "device": "#18c9ef",
+            "ampm": "#5e20d1",
+            "none": "6060f0"
+        },
+        "device": "tablet"
+    },
+    {
+        "locationX": "32.167040",
+        "locationY": "34.848032",
+        "destinationX": "22.390714",
+        "destinationY": "114.117737",
+        "favicon": "http://www.youtube.com/favicon.ico",
+        "title": "YouTube",
+        "date": "JUN 17 2014 - 8:30 PM",
+        "address": "Sokolov St , Herzliya",
+        "siteLink": "http://www.youtube.com",
+        "infoWindowId": "infoWindow9",
+        "lineColor":
+        {
+            "device": "#16eb61",
+            "ampm": "#5e20d1",
+            "none": "6060f0"
+        },
         "device": "mobile"
     }
     ]
