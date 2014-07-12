@@ -286,6 +286,7 @@ html, body
     height: 320px;
 
     font-family: 'courier', sans-serif;
+    letter-spacing: 1px;
     line-height: 20px;
 }
 
@@ -310,9 +311,10 @@ html, body
     text-decoration: none;
     font-size: 14px;
     text-align: center;
-    padding-top: 18px;
+    padding-top: 15px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
+    margin-top: 5px;
 
     float: left;
     width: 315px;
