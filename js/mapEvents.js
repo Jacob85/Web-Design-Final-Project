@@ -151,9 +151,6 @@ $( document ).ready(function(){
 
             }
         });
-
-        document.getElementById("slider-range").childNodes[13].className += " leftHandle";
-        document.getElementById("slider-range").childNodes[12].className += " rightHandle";
     });
 
 

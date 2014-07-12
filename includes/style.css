@@ -27,6 +27,11 @@ html, body
     background-color: #000000;
 }
 
+#pageHeader{
+    height: 100px;
+    width: 100%;
+}
+
 #logo
 {
     position: absolute;
@@ -219,35 +224,6 @@ html, body
     height: 37px;
 }
 
-#pageHeader{
-    height: 100px;
-    width: 100%;
-}
-
-.slider-date
-{
-    color: #aaaaaa;
-    font-size: 11px;
-    position: absolute;
-    top: -10px;
-}
-
-#apr{
-    left: -4px;
-}
-
-#may{
-    left: 114px;
-}
-
-#jun{
-    left: 232px;
-}
-
-#jul{
-    left: 351px;
-}
-
 #sliderContainer
 {
     background: url("../images/sliderBackground.png");
@@ -280,26 +256,12 @@ html, body
     outline: none;
 }
 
-.leftHandle
-{
-    /*margin-left: -22px !important;*/
-}
-
-.rightHandle
-{
-    /*margin-left: 13px !important;*/
-}
-
 .ui-slider-range
 {
     background-color: #fdfdfd !important;
     height: 2px !important;
     top: 37px !important;
     left: 30px;
-;
-
-    /*max-width: 360px;*/
-    /*margin-left: 20px;*/
 }
 
 #amount
